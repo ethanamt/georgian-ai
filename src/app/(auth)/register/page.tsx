@@ -18,28 +18,44 @@ export default function RegisterPage() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (!supabase) return;
+    if (!supabase) {
+      setError("Supabase non initialisé");
+      return;
+    }
     setPending(true);
     setError(null);
 
-    const form = new FormData(e.currentTarget);
-    const email = form.get("email") as string;
-    const password = form.get("password") as string;
-    const displayName = form.get("displayName") as string;
+    try {
+      const form = new FormData(e.currentTarget);
+      const email = form.get("email") as string;
+      const password = form.get("password") as string;
+      const displayName = form.get("displayName") as string;
 
-    const { data: { user }, error: authError } = await supabase.auth.signUp({ email, password });
+      console.log("signUp attempt:", email);
 
-    if (authError || !user) {
-      setError(authError?.message || "Erreur lors de l'inscription");
+      const result = await supabase.auth.signUp({ email, password });
+      const { user } = result.data || {};
+      const authError = result.error;
+
+      console.log("signUp result:", { user, authError: authError ? { message: authError.message, ...authError } : null });
+
+      if (authError || !user) {
+        const msg = authError?.message ? String(authError.message) : "Erreur lors de l'inscription";
+        setError(msg);
+        setPending(false);
+        return;
+      }
+
+      if (displayName) {
+        await supabase.from("profiles").update({ display_name: displayName }).eq("id", user.id);
+      }
+
+      router.push("/today");
+    } catch (err) {
+      console.error("signUp error:", err);
+      setError(err instanceof Error ? err.message : "Erreur inconnue");
       setPending(false);
-      return;
     }
-
-    if (displayName) {
-      await supabase.from("profiles").update({ display_name: displayName }).eq("id", user.id);
-    }
-
-    router.push("/today");
   }
 
   return (

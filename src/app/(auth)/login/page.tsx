@@ -18,23 +18,32 @@ export default function LoginPage() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (!supabase) return;
+    if (!supabase) {
+      setError("Supabase non initialisé");
+      return;
+    }
     setPending(true);
     setError(null);
 
-    const form = new FormData(e.currentTarget);
-    const email = form.get("email") as string;
-    const password = form.get("password") as string;
+    try {
+      const form = new FormData(e.currentTarget);
+      const email = form.get("email") as string;
+      const password = form.get("password") as string;
 
-    const { error: authError } = await supabase.auth.signInWithPassword({ email, password });
+      const { error: authError } = await supabase.auth.signInWithPassword({ email, password });
 
-    if (authError) {
-      setError(authError.message);
+      if (authError) {
+        setError(authError.message);
+        setPending(false);
+        return;
+      }
+
+      router.push("/today");
+    } catch (err) {
+      console.error("signIn error:", err);
+      setError(err instanceof Error ? err.message : "Erreur inconnue");
       setPending(false);
-      return;
     }
-
-    router.push("/today");
   }
 
   return (
