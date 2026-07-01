@@ -17,13 +17,17 @@ export async function signIn(
     return { error: "Email et mot de passe requis" };
   }
 
-  const { error } = await supabase.auth.signInWithPassword({
-    email,
-    password,
-  });
+  try {
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
 
-  if (error) {
-    return { error: error.message };
+    if (error) {
+      return { error: error.message };
+    }
+  } catch (err) {
+    return { error: err instanceof Error ? err.message : "Erreur serveur" };
   }
 
   revalidatePath("/", "layout");
@@ -44,29 +48,33 @@ export async function signUp(
     return { error: "Email et mot de passe requis" };
   }
 
-  const {
-    data: { user },
-    error: authError,
-  } = await supabase.auth.signUp({
-    email,
-    password,
-  });
+  try {
+    const {
+      data: { user },
+      error: authError,
+    } = await supabase.auth.signUp({
+      email,
+      password,
+    });
 
-  if (authError || !user) {
-    return { error: authError?.message || "Erreur lors de l'inscription" };
+    if (authError || !user) {
+      return { error: authError?.message || "Erreur lors de l'inscription" };
+    }
+
+    const { error: profileError } = await supabase.from("profiles").insert({
+      id: user.id,
+      email,
+      display_name: displayName || null,
+    });
+
+    if (profileError) {
+      return { error: "Erreur lors de la création du profil" };
+    }
+
+    await supabase.from("settings").insert({ user_id: user.id });
+  } catch (err) {
+    return { error: err instanceof Error ? err.message : "Erreur serveur" };
   }
-
-  const { error: profileError } = await supabase.from("profiles").insert({
-    id: user.id,
-    email,
-    display_name: displayName || null,
-  });
-
-  if (profileError) {
-    return { error: "Erreur lors de la création du profil" };
-  }
-
-  await supabase.from("settings").insert({ user_id: user.id });
 
   revalidatePath("/", "layout");
   redirect("/today");
