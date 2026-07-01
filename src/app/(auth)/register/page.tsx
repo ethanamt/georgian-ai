@@ -2,9 +2,9 @@
 
 export const dynamic = "force-dynamic";
 
-import { useActionState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { signUp, type AuthState } from "@/server/actions/auth";
+import { useSupabaseOrNull } from "@/components/providers";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -12,13 +12,35 @@ import { Label } from "@/components/ui/label";
 
 export default function RegisterPage() {
   const router = useRouter();
-  const [state, action, pending] = useActionState(signUp, { error: null, success: false });
+  const supabase = useSupabaseOrNull();
+  const [error, setError] = useState<string | null>(null);
+  const [pending, setPending] = useState(false);
 
-  useEffect(() => {
-    if (state.success) {
-      router.push("/today");
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (!supabase) return;
+    setPending(true);
+    setError(null);
+
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email") as string;
+    const password = form.get("password") as string;
+    const displayName = form.get("displayName") as string;
+
+    const { data: { user }, error: authError } = await supabase.auth.signUp({ email, password });
+
+    if (authError || !user) {
+      setError(authError?.message || "Erreur lors de l'inscription");
+      setPending(false);
+      return;
     }
-  }, [state.success, router]);
+
+    if (displayName) {
+      await supabase.from("profiles").update({ display_name: displayName }).eq("id", user.id);
+    }
+
+    router.push("/today");
+  }
 
   return (
     <div className="flex min-h-screen items-center justify-center px-4">
@@ -30,7 +52,7 @@ export default function RegisterPage() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form action={action} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="displayName">Prénom (optionnel)</Label>
               <Input id="displayName" name="displayName" />
@@ -43,18 +65,14 @@ export default function RegisterPage() {
               <Label htmlFor="password">Mot de passe</Label>
               <Input id="password" name="password" type="password" required />
             </div>
-            {state.error && (
-              <p className="text-sm text-destructive">{state.error}</p>
-            )}
+            {error && <p className="text-sm text-destructive">{error}</p>}
             <Button type="submit" className="w-full" disabled={pending}>
-              {pending ? "Inscription..." : "S&apos;inscrire"}
+              {pending ? "Inscription..." : "S'inscrire"}
             </Button>
           </form>
           <p className="mt-4 text-center text-sm text-muted-foreground">
             Déjà un compte ?{" "}
-            <a href="/login" className="text-primary hover:underline">
-              Se connecter
-            </a>
+            <a href="/login" className="text-primary hover:underline">Se connecter</a>
           </p>
         </CardContent>
       </Card>

@@ -4,12 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
-export type AuthState = { error: string | null; success: boolean };
-
-export async function signIn(
-  prevState: AuthState,
-  formData: FormData
-): Promise<AuthState> {
+export async function signIn(_prevState: { error: string | null; success: boolean }, formData: FormData) {
   const supabase = await createClient();
 
   const email = formData.get("email") as string;
@@ -19,23 +14,17 @@ export async function signIn(
     return { error: "Email et mot de passe requis", success: false };
   }
 
-  const { error } = await supabase.auth.signInWithPassword({
-    email,
-    password,
-  });
+  const { error } = await supabase.auth.signInWithPassword({ email, password });
 
   if (error) {
     return { error: error.message, success: false };
   }
 
   revalidatePath("/", "layout");
-  return { error: null, success: true };
+  redirect("/today");
 }
 
-export async function signUp(
-  prevState: AuthState,
-  formData: FormData
-): Promise<AuthState> {
+export async function signUp(_prevState: { error: string | null; success: boolean }, formData: FormData) {
   const supabase = await createClient();
 
   const email = formData.get("email") as string;
@@ -46,13 +35,7 @@ export async function signUp(
     return { error: "Email et mot de passe requis", success: false };
   }
 
-  const {
-    data: { user },
-    error: authError,
-  } = await supabase.auth.signUp({
-    email,
-    password,
-  });
+  const { data: { user }, error: authError } = await supabase.auth.signUp({ email, password });
 
   if (authError || !user) {
     return { error: authError?.message || "Erreur lors de l'inscription", success: false };
@@ -63,7 +46,7 @@ export async function signUp(
   }
 
   revalidatePath("/", "layout");
-  return { error: null, success: true };
+  redirect("/today");
 }
 
 export async function signOut() {
@@ -75,8 +58,6 @@ export async function signOut() {
 
 export async function getUser() {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data: { user } } = await supabase.auth.getUser();
   return user;
 }
