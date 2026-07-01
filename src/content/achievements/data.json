@@ -1,0 +1,86 @@
+{
+  "achievements": [
+    {
+      "id": "first_lesson",
+      "slug": "first_lesson",
+      "title": "Première leçon",
+      "description": "Terminer votre première leçon",
+      "icon": "book-open",
+      "conditionType": "lessons_completed",
+      "conditionValue": 1,
+      "xpReward": 50
+    },
+    {
+      "id": "streak_3",
+      "slug": "streak_3",
+      "title": "Sur la bonne voie",
+      "description": "Atteindre un streak de 3 jours",
+      "icon": "zap",
+      "conditionType": "streak",
+      "conditionValue": 3,
+      "xpReward": 100
+    },
+    {
+      "id": "streak_7",
+      "slug": "streak_7",
+      "title": "Semaine parfaite",
+      "description": "Atteindre un streak de 7 jours",
+      "icon": "zap",
+      "conditionType": "streak",
+      "conditionValue": 7,
+      "xpReward": 250
+    },
+    {
+      "id": "alphabet_master",
+      "slug": "alphabet_master",
+      "title": "Maître de l'alphabet",
+      "description": "Maîtriser les 33 lettres",
+      "icon": "alphabet",
+      "conditionType": "letters_mastered",
+      "conditionValue": 33,
+      "xpReward": 500
+    },
+    {
+      "id": "vocab_10",
+      "slug": "vocab_10",
+      "title": "Apprenti lexicographe",
+      "description": "Apprendre 10 mots",
+      "icon": "book",
+      "conditionType": "words_known",
+      "conditionValue": 10,
+      "xpReward": 100
+    },
+    {
+      "id": "first_review",
+      "slug": "first_review",
+      "title": "Réviseur",
+      "description": "Terminer votre première session de révision",
+      "icon": "refresh-cw",
+      "conditionType": "reviews_completed",
+      "conditionValue": 1,
+      "xpReward": 50
+    },
+    {
+      "id": "perfect_exercise",
+      "slug": "perfect_exercise",
+      "title": "Sans faute",
+      "description": "Réussir un exercice à 100%",
+      "icon": "target",
+      "conditionType": "perfect_exercises",
+      "conditionValue": 1,
+      "xpReward": 100
+    }
+  ],
+  "levels": [
+    { "level": 1, "xpRequired": 0, "title": "Débutant" },
+    { "level": 2, "xpRequired": 200, "title": "Élève" },
+    { "level": 3, "xpRequired": 500, "title": "Apprenti" },
+    { "level": 4, "xpRequired": 1000, "title": "Lecteur" },
+    { "level": 5, "xpRequired": 2000, "title": "Rédacteur" },
+    { "level": 6, "xpRequired": 3500, "title": "Conversateur" },
+    { "level": 7, "xpRequired": 5000, "title": "Expert" },
+    { "level": 8, "xpRequired": 7500, "title": "Maître" },
+    { "level": 9, "xpRequired": 10000, "title": "Savant" },
+    { "level": 10, "xpRequired": 15000, "title": "Polyglotte" }
+  ]
+}

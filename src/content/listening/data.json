@@ -1,0 +1,130 @@
+{
+  "exercises": [
+    {
+      "id": "listen-1",
+      "title": "Salutations",
+      "level": "A1",
+      "order": 1,
+      "estimatedMinutes": 5,
+      "georgianText": "გამარჯობა! მე ვარ გიორგი. მადლობა.",
+      "translation": "Bonjour ! Je suis Giorgi. Merci.",
+      "questions": [
+        {
+          "question": "Comment s'appelle la personne ?",
+          "options": ["Nino", "Giorgi", "Tamari"],
+          "correctIndex": 1
+        },
+        {
+          "question": "Que dit-elle après le prénom ?",
+          "options": ["Au revoir", "S'il vous plaît", "Merci"],
+          "correctIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "listen-2",
+      "title": "Dans la maison",
+      "level": "A1",
+      "order": 2,
+      "estimatedMinutes": 5,
+      "georgianText": "ეს არის ჩემი სახლი. სახლი დიდია. აქ არის წიგნი და მაგიდა.",
+      "translation": "Voici ma maison. La maison est grande. Ici il y a un livre et une table.",
+      "questions": [
+        {
+          "question": "De quoi parle-t-on ?",
+          "options": ["D'une voiture", "D'une maison", "D'une école"],
+          "correctIndex": 1
+        },
+        {
+          "question": "Qu'est-ce qui se trouve dans la maison ?",
+          "options": ["Un livre et une table", "Une chaise et un lit", "Une télé et un canapé"],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "listen-3",
+      "title": "Les nombres",
+      "level": "A1",
+      "order": 3,
+      "estimatedMinutes": 5,
+      "georgianText": "ერთი, ორი, სამი, ოთხი, ხუთი. მე მაქვს ხუთი წიგნი.",
+      "translation": "Un, deux, trois, quatre, cinq. J'ai cinq livres.",
+      "questions": [
+        {
+          "question": "Combien de livres la personne a-t-elle ?",
+          "options": ["Trois", "Quatre", "Cinq"],
+          "correctIndex": 2
+        },
+        {
+          "question": "Quel est le dernier nombre cité ?",
+          "options": ["ოთხი", "ხუთი", "სამი"],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "listen-4",
+      "title": "La famille",
+      "level": "A1",
+      "order": 4,
+      "estimatedMinutes": 5,
+      "georgianText": "ჩემი დედა ექიმია. ჩემი მამა მასწავლებელია. მე მყავს ორი და.",
+      "translation": "Ma mère est médecin. Mon père est professeur. J'ai deux soeurs.",
+      "questions": [
+        {
+          "question": "Que fait la mère ?",
+          "options": ["Elle est professeur", "Elle est médecin", "Elle est ingénieur"],
+          "correctIndex": 1
+        },
+        {
+          "question": "Combien de soeurs ?",
+          "options": ["Une", "Deux", "Trois"],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "listen-5",
+      "title": "Les couleurs",
+      "level": "A1",
+      "order": 5,
+      "estimatedMinutes": 5,
+      "georgianText": "ჩემი საყვარელი ფერი არის ლურჯი. ცა ლურჯია. ბალახი მწვანეა.",
+      "translation": "Ma couleur préférée est le bleu. Le ciel est bleu. L'herbe est verte.",
+      "questions": [
+        {
+          "question": "Quelle est la couleur préférée ?",
+          "options": ["Verte", "Bleue", "Rouge"],
+          "correctIndex": 1
+        },
+        {
+          "question": "De quelle couleur est l'herbe ?",
+          "options": ["Bleue", "Verte", "Jaune"],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "listen-6",
+      "title": "Au restaurant",
+      "level": "A1",
+      "order": 6,
+      "estimatedMinutes": 5,
+      "georgianText": "მინდა პური, წყალი და ხორცი. მადლობა! ძალიან გემრიელია.",
+      "translation": "Je voudrais du pain, de l'eau et de la viande. Merci ! C'est très bon.",
+      "questions": [
+        {
+          "question": "Qu'est-ce que la personne commande ?",
+          "options": ["Du pain et du vin", "Du pain, de l'eau et de la viande", "De la soupe et du pain"],
+          "correctIndex": 1
+        },
+        {
+          "question": "Que pense-t-elle du repas ?",
+          "options": ["C'est trop salé", "C'est très bon", "C'est froid"],
+          "correctIndex": 1
+        }
+      ]
+    }
+  ]
+}

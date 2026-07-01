@@ -1,0 +1,531 @@
+{
+  "lessons": [
+    {
+      "slug": "present-etre",
+      "title": "Le verbe « être » au présent",
+      "description": "Conjugaison du verbe ყოფნა (q'opna) — être",
+      "level": "A1",
+      "order": 1,
+      "estimatedMinutes": 10,
+      "sections": [
+        {
+          "type": "text",
+          "content": "Le verbe « être » est le verbe le plus important en géorgien. Il se conjugue de manière irrégulière au présent."
+        },
+        {
+          "type": "conjugation",
+          "title": "Présent de « être »",
+          "header": ["Pronom", "Géorgien", "Transcription", "Français"],
+          "rows": [
+            ["მე (je)", "ვარ", "var", "je suis"],
+            ["შენ (tu)", "ხარ", "khar", "tu es"],
+            ["ის (il/elle)", "არის", "aris", "il/elle est"],
+            ["ჩვენ (nous)", "ვართ", "vart", "nous sommes"],
+            ["თქვენ (vous)", "ხართ", "khart", "vous êtes"],
+            ["ისინი (ils/elles)", "არიან", "arian", "ils/elles sont"]
+          ]
+        },
+        {
+          "type": "text",
+          "content": "Le verbe « être » est également utilisé comme auxiliaire pour former le parfait de certains verbes."
+        },
+        {
+          "type": "example",
+          "georgian": "მე ვარ სტუდენტი.",
+          "transliteration": "Me var student'i.",
+          "french": "Je suis étudiant."
+        },
+        {
+          "type": "example",
+          "georgian": "ის არის ექიმი.",
+          "transliteration": "Is aris ekimi.",
+          "french": "Il/Elle est médecin."
+        },
+        {
+          "type": "example",
+          "georgian": "ჩვენ ვართ მეგობრები.",
+          "transliteration": "Chven vart megobrebi.",
+          "french": "Nous sommes amis."
+        },
+        {
+          "type": "note",
+          "content": "Contrairement au français, on n'utilise pas de pronom sujet explicite la plupart du temps — la terminaison du verbe suffit."
+        }
+      ]
+    },
+    {
+      "slug": "ordre-mots",
+      "title": "L'ordre des mots",
+      "description": "Structure de phrase SOV et particularités",
+      "level": "A1",
+      "order": 2,
+      "estimatedMinutes": 10,
+      "sections": [
+        {
+          "type": "text",
+          "content": "L'ordre des mots en géorgien est Sujet-Objet-Verbe (SOV), contrairement au français qui est SVO."
+        },
+        {
+          "type": "comparison",
+          "title": "SOV vs SVO",
+          "rows": [
+            ["Français (SVO)", "Je", "mange", "une pomme"],
+            ["Géorgien (SOV)", "მე", "ვაშლს", "ვჭამ"],
+            ["Transcription", "Me", "vashls", "vch'am"]
+          ]
+        },
+        {
+          "type": "example",
+          "georgian": "მე წიგნს ვკითხულობ.",
+          "transliteration": "Me ts'igns vk'itkhulob.",
+          "french": "Je lis un livre. (litt. \"Je livre lis\")"
+        },
+        {
+          "type": "text",
+          "content": "L'ordre peut changer pour mettre l'emphase sur un élément, mais la structure de base reste SOV."
+        },
+        {
+          "type": "note",
+          "content": "En géorgien, le complément d'objet direct porte le suffixe -ს (s) au singulier et -ებს (-ebs) au pluriel."
+        }
+      ]
+    },
+    {
+      "slug": "pluriel",
+      "title": "Le pluriel",
+      "description": "Formation du pluriel des noms",
+      "level": "A1",
+      "order": 3,
+      "estimatedMinutes": 10,
+      "sections": [
+        {
+          "type": "text",
+          "content": "Le pluriel des noms en géorgien se forme avec le suffixe -ები (-ebi)."
+        },
+        {
+          "type": "example",
+          "georgian": "წიგნი → წიგნები",
+          "transliteration": "ts'igni → ts'ignebi",
+          "french": "livre → livres"
+        },
+        {
+          "type": "example",
+          "georgian": "კაცი → კაცები",
+          "transliteration": "k'atsi → k'atsebi",
+          "french": "homme → hommes"
+        },
+        {
+          "type": "example",
+          "georgian": "სახლი → სახლები",
+          "transliteration": "sakhli → sakhlebi",
+          "french": "maison → maisons"
+        },
+        {
+          "type": "text",
+          "content": "La règle est très régulière : on remplace la voyelle finale -ი (-i) par -ები (-ebi)."
+        },
+        {
+          "type": "note",
+          "content": "Il existe quelques irrégularités avec des mots d'origine étrangère ou des noms se terminant par -ა (-a) ou -ე (-e)."
+        }
+      ]
+    },
+    {
+      "slug": "negation",
+      "title": "La négation",
+      "description": "Comment former des phrases négatives",
+      "level": "A1",
+      "order": 4,
+      "estimatedMinutes": 10,
+      "sections": [
+        {
+          "type": "text",
+          "content": "La négation en géorgien se forme avec la particule არ (ar) placée devant le verbe."
+        },
+        {
+          "type": "example",
+          "georgian": "მე ვარ → მე არ ვარ",
+          "transliteration": "Me var → Me ar var",
+          "french": "Je suis → Je ne suis pas"
+        },
+        {
+          "type": "example",
+          "georgian": "ის არის → ის არ არის",
+          "transliteration": "Is aris → Is ar aris",
+          "french": "Il est → Il n'est pas"
+        },
+        {
+          "type": "example",
+          "georgian": "მე ვჭამ → მე არ ვჭამ",
+          "transliteration": "Me vch'am → Me ar vch'am",
+          "french": "Je mange → Je ne mange pas"
+        },
+        {
+          "type": "text",
+          "content": "Pour dire « ne...pas », on utilise simplement არ avant le verbe conjugué. Pas de mot supplémentaire nécessaire."
+        },
+        {
+          "type": "note",
+          "content": "Attention : avec le verbe « être » à la 3e personne, on dit არ არის (ar aris) et non pas *არის არ. Le mot არ (ar) et le verbe არის (aris) se ressemblent mais sont différents."
+        }
+      ]
+    },
+    {
+      "slug": "questions",
+      "title": "Poser des questions",
+      "description": "Mots interrogatifs et formation des questions",
+      "level": "A1",
+      "order": 5,
+      "estimatedMinutes": 10,
+      "sections": [
+        {
+          "type": "text",
+          "content": "Les questions en géorgien se forment soit avec des mots interrogatifs, soit avec la particule -𛱔 (-?) en fin de phrase à l'oral."
+        },
+        {
+          "type": "table",
+          "title": "Mots interrogatifs",
+          "header": ["Français", "Géorgien", "Transcription"],
+          "rows": [
+            ["Qui ?", "ვინ?", "vin"],
+            ["Quoi ?", "რა?", "ra"],
+            ["Où ?", "სად?", "sad"],
+            ["Quand ?", "როდის?", "rodis"],
+            ["Comment ?", "როგორ?", "rogor"],
+            ["Pourquoi ?", "რატომ?", "rat'om"],
+            ["Combien ?", "რამდენი?", "ramdeni"]
+          ]
+        },
+        {
+          "type": "example",
+          "georgian": "ვინ ხარ?",
+          "transliteration": "Vin khar?",
+          "french": "Qui es-tu ?"
+        },
+        {
+          "type": "example",
+          "georgian": "რა არის ეს?",
+          "transliteration": "Ra aris es?",
+          "french": "Qu'est-ce que c'est ?"
+        },
+        {
+          "type": "example",
+          "georgian": "სად ცხოვრობ?",
+          "transliteration": "Sad tskhovrob?",
+          "french": "Où habites-tu ?"
+        },
+        {
+          "type": "note",
+          "content": "L'intonation montante en fin de phrase peut suffire pour une question fermée (oui/non), sans mot interrogatif."
+        }
+      ]
+    },
+    {
+      "slug": "present-avoir",
+      "title": "Le verbe « avoir » au présent",
+      "description": "Conjugaison du verbe ქონა (kona) — avoir",
+      "level": "A1",
+      "order": 6,
+      "estimatedMinutes": 10,
+      "sections": [
+        {
+          "type": "text",
+          "content": "Le verbe « avoir » se conjugue différemment selon qu'il s'agit d'un objet possédé ou d'une caractéristique."
+        },
+        {
+          "type": "conjugation",
+          "title": "Présent de « avoir »",
+          "header": ["Pronom", "Géorgien", "Transcription", "Français"],
+          "rows": [
+            ["მე", "მაქვს", "makvs", "j'ai"],
+            ["შენ", "გაქვს", "gakvs", "tu as"],
+            ["ის", "აქვს", "akvs", "il/elle a"],
+            ["ჩვენ", "გვაქვს", "gvakvs", "nous avons"],
+            ["თქვენ", "გაქვთ", "gakvt", "vous avez"],
+            ["ისინი", "აქვთ", "akvt", "ils/elles ont"]
+          ]
+        },
+        {
+          "type": "text",
+          "content": "Notez que la conjugaison utilise le préfixe de la personne (m-, g-, a-, gv-, g-...-t, a-...-t) avec la racine -ქვს (-kvs)."
+        },
+        {
+          "type": "example",
+          "georgian": "მაქვს მანქანა.",
+          "transliteration": "Makvs mankana.",
+          "french": "J'ai une voiture."
+        },
+        {
+          "type": "example",
+          "georgian": "გაქვს ძაღლი?",
+          "transliteration": "Gakvs dzaghli?",
+          "french": "As-tu un chien ?"
+        }
+      ]
+    },
+    {
+      "slug": "postpositions",
+      "title": "Les postpositions",
+      "description": "Au lieu des prépositions : les suffixes de cas",
+      "level": "A1",
+      "order": 7,
+      "estimatedMinutes": 10,
+      "sections": [
+        {
+          "type": "text",
+          "content": "Le géorgien utilise des postpositions (après le nom) plutôt que des prépositions (avant le nom). Ces postpositions prennent la forme de suffixes ajoutés au nom."
+        },
+        {
+          "type": "table",
+          "title": "Principaux suffixes",
+          "header": ["Suffixe", "Sens", "Exemple", "Traduction"],
+          "rows": [
+            ["-ში (-shi)", "dans", "სახლში", "dans la maison"],
+            ["-ზე (-ze)", "sur", "მაგიდაზე", "sur la table"],
+            ["-თან (-tan)", "chez/auprès", "მეგობართან", "chez l'ami"],
+            ["-დან (-dan)", "de/depuis", "თბილისიდან", "de Tbilissi"],
+            ["-მდე (-mde)", "jusqu'à", "სახლამდე", "jusqu'à la maison"],
+            ["-გან (-gan)", "de la part", "მამისგან", "de la part du père"]
+          ]
+        },
+        {
+          "type": "example",
+          "georgian": "მე ვარ სახლში.",
+          "transliteration": "Me var sakhlishi.",
+          "french": "Je suis dans la maison."
+        },
+        {
+          "type": "example",
+          "georgian": "წიგნი მაგიდაზეა.",
+          "transliteration": "Ts'igni magidazea.",
+          "french": "Le livre est sur la table."
+        },
+        {
+          "type": "note",
+          "content": "Ces suffixes sont très fréquents et essentiels à maîtriser. Ils remplacent la plupart des prépositions françaises."
+        }
+      ]
+    },
+    {
+      "slug": "alphabet-ecriture",
+      "title": "L'écriture Mkhedruli",
+      "description": "Particularités de l'écriture et prononciation",
+      "level": "A1",
+      "order": 8,
+      "estimatedMinutes": 10,
+      "sections": [
+        {
+          "type": "text",
+          "content": "L'alphabet géorgien moderne s'appelle Mkhedruli (მხედრული), qui signifie « écriture cavalière » ou « écriture militaire »."
+        },
+        {
+          "type": "text",
+          "content": "Le Mkhedruli compte 33 lettres (5 voyelles + 28 consonnes). Chaque lettre représente un son unique : l'écriture est phonémique."
+        },
+        {
+          "type": "text",
+          "content": "Particularités importantes :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Pas de distinction majuscule/minuscule"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "possessifs",
+      "title": "Les possessifs",
+      "description": "Mon, ton, son — les adjectifs possessifs",
+      "level": "A1",
+      "order": 9,
+      "estimatedMinutes": 10,
+      "sections": [
+        {
+          "type": "text",
+          "content": "Les adjectifs possessifs en géorgien se placent avant le nom et s'accordent avec le possesseur."
+        },
+        {
+          "type": "conjugation",
+          "title": "Adjectifs possessifs",
+          "header": ["Possesseur", "Géorgien", "Transcription", "Exemple"],
+          "rows": [
+            ["mon/ma", "ჩემი", "chemi", "ჩემი სახლი (ma maison)"],
+            ["ton/ta", "შენი", "sheni", "შენი წიგნი (ton livre)"],
+            ["son/sa", "მისი", "misi", "მისი დედა (sa mère)"],
+            ["notre", "ჩვენი", "chveni", "ჩვენი ქალაქი (notre ville)"],
+            ["votre", "თქვენი", "tkveni", "თქვენი მანქანა (votre voiture)"],
+            ["leur", "მათი", "mati", "მათი სახლი (leur maison)"]
+          ]
+        },
+        {
+          "type": "example",
+          "georgian": "ეს არის ჩემი წიგნი.",
+          "transliteration": "Es aris chemi ts'igni.",
+          "french": "C'est mon livre."
+        },
+        {
+          "type": "example",
+          "georgian": "სად არის შენი სახლი?",
+          "transliteration": "Sad aris sheni sakhli?",
+          "french": "Où est ta maison ?"
+        },
+        {
+          "type": "note",
+          "content": "Contrairement au français, le possessif ne change pas selon le genre ou le nombre du nom possédé. ჩემი (chemi) signifie aussi bien 'mon' que 'ma' ou 'mes'."
+        }
+      ]
+    },
+    {
+      "slug": "present-regulier",
+      "title": "Le présent des verbes réguliers",
+      "description": "Conjugaison des verbes au présent (classe 1)",
+      "level": "A1",
+      "order": 10,
+      "estimatedMinutes": 10,
+      "sections": [
+        {
+          "type": "text",
+          "content": "Les verbes géorgiens se conjuguent avec des préfixes et suffixes qui indiquent la personne. Voici le modèle pour les verbes réguliers de la classe 1."
+        },
+        {
+          "type": "conjugation",
+          "title": "Verbe « faire » — კეთება",
+          "header": ["Personne", "Géorgien", "Transcription", "Français"],
+          "rows": [
+            ["მე", "ვაკეთებ", "vak'eteb", "je fais"],
+            ["შენ", "აკეთებ", "ak'eteb", "tu fais"],
+            ["ის", "აკეთებს", "ak'etebs", "il/elle fait"],
+            ["ჩვენ", "ვაკეთებთ", "vak'etebt", "nous faisons"],
+            ["თქვენ", "აკეთებთ", "ak'etebt", "vous faites"],
+            ["ისინი", "აკეთებენ", "ak'eteben", "ils/elles font"]
+          ]
+        },
+        {
+          "type": "text",
+          "content": "Le schéma est : préfixe de personne + radical + suffixe. La voyelle -ე- (-e-) est la marque du présent."
+        },
+        {
+          "type": "note",
+          "content": "Les verbes géorgiens sont complexes. Chaque verbe appartient à une classe de conjugaison. En A1, concentrez-vous sur la mémorisation des formes les plus courantes."
+        }
+      ]
+    },
+    {
+      "slug": "negation-approfondie",
+      "title": "Négation approfondie",
+      "description": "Ne...pas, ne...jamais, ne...personne",
+      "level": "A1",
+      "order": 11,
+      "estimatedMinutes": 10,
+      "sections": [
+        {
+          "type": "text",
+          "content": "En plus de la négation simple avec არ (ar), le géorgien utilise d'autres mots pour exprimer des négations plus spécifiques."
+        },
+        {
+          "type": "table",
+          "title": "Mots de négation",
+          "header": ["Français", "Géorgien", "Transcription"],
+          "rows": [
+            ["ne...pas", "არ", "ar"],
+            ["ne...jamais", "არასდროს", "arasdros"],
+            ["ne...personne", "არავინ", "aravin"],
+            ["ne...rien", "არაფერი", "araperi"],
+            ["nulle part", "არსად", "arsad"]
+          ]
+        },
+        {
+          "type": "example",
+          "georgian": "მე არასდროს ვჭამ ხორცს.",
+          "transliteration": "Me arasdros vch'am khortss.",
+          "french": "Je ne mange jamais de viande."
+        },
+        {
+          "type": "example",
+          "georgian": "აქ არავინ არის.",
+          "transliteration": "Ak aravin aris.",
+          "french": "Il n'y a personne ici."
+        }
+      ]
+    },
+    {
+      "slug": "imperatif",
+      "title": "L'impératif",
+      "description": "Donner des ordres et instructions",
+      "level": "A1",
+      "order": 12,
+      "estimatedMinutes": 10,
+      "sections": [
+        {
+          "type": "text",
+          "content": "L'impératif en géorgien se forme simplement en utilisant le radical du verbe, sans préfixe de personne."
+        },
+        {
+          "type": "conjugation",
+          "title": "Impératif — verbes courants",
+          "header": ["Infinitif", "Géorgien", "Transcription", "Français"],
+          "rows": [
+            ["თქმა (dire)", "თქვი!", "tkvi!", "dis !"],
+            ["სვლა (aller)", "წადი!", "ts'adi!", "va !"],
+            ["ჭამა (manger)", "ჭამე!", "ch'ame!", "mange !"],
+            ["დალევა (boire)", "დალიე!", "dalie!", "bois !"],
+            ["კითხვა (lire)", "წაიკითხე!", "ts'aik'itkhe!", "lis !"]
+          ]
+        },
+        {
+          "type": "example",
+          "georgian": "წადი სახლში!",
+          "transliteration": "Ts'adi sakhlishi!",
+          "french": "Va à la maison !"
+        },
+        {
+          "type": "example",
+          "georgian": "ჭამე პური!",
+          "transliteration": "Ch'ame p'uri!",
+          "french": "Mange le pain !"
+        },
+        {
+          "type": "note",
+          "content": "Pour la forme polie (vous), on ajoute -თ (-t) à la fin : წადით! (ts'adit!) — allez !"
+        }
+      ]
+    },
+    {
+      "slug": "cas-grammaticaux",
+      "title": "Les cas grammaticaux",
+      "description": "Nominatif, ergatif, datif, génitif",
+      "level": "A1",
+      "order": 13,
+      "estimatedMinutes": 10,
+      "sections": [
+        {
+          "type": "text",
+          "content": "Le géorgien utilise des cas pour indiquer la fonction des mots dans la phrase. Les principaux cas sont : nominatif (sujet), ergatif (sujet des verbes transitifs au présent), datif (objet indirect), génitif (possession)."
+        },
+        {
+          "type": "table",
+          "title": "Les cas",
+          "header": ["Cas", "Suffixe", "Exemple", "Fonction"],
+          "rows": [
+            ["Nominatif", "-ი (-i)", "კაცი (k'atsi)", "sujet"],
+            ["Ergatif", "-მა (-ma)", "კაცმა (k'atsma)", "sujet transitif"],
+            ["Datif", "-ს (-s)", "კაცს (k'atss)", "objet indirect"],
+            ["Génitif", "-ის (-is)", "კაცის (k'atsis)", "possession"],
+            ["Instrumental", "-ით (-it)", "კაცით (k'atsit)", "moyen"],
+            ["Adverbial", "-ად (-ad)", "კაცად (k'atsad)", "manière"]
+          ]
+        },
+        {
+          "type": "text",
+          "content": "Les suffixes s'ajoutent au radical du nom (sans la voyelle finale -ი)."
+        },
+        {
+          "type": "note",
+          "content": "Le système des cas est complexe. En A1, concentrez-vous sur le nominatif et le datif qui sont les plus utilisés."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "exercises": [
+    {
+      "id": "pron-1",
+      "title": "Les salutations",
+      "level": "A1",
+      "order": 1,
+      "words": [
+        { "georgian": "გამარჯობა", "transliteration": "gamarjoba", "french": "bonjour" },
+        { "georgian": "მადლობა", "transliteration": "madloba", "french": "merci" },
+        { "georgian": "ნახვამდის", "transliteration": "nakhvamdis", "french": "au revoir" }
+      ]
+    },
+    {
+      "id": "pron-2",
+      "title": "Présentation",
+      "level": "A1",
+      "order": 2,
+      "words": [
+        { "georgian": "მე ვარ", "transliteration": "me var", "french": "je suis" },
+        { "georgian": "შენ ხარ", "transliteration": "shen khar", "french": "tu es" },
+        { "georgian": "ის არის", "transliteration": "is aris", "french": "il/elle est" }
+      ]
+    },
+    {
+      "id": "pron-3",
+      "title": "Les voyelles",
+      "level": "A1",
+      "order": 3,
+      "words": [
+        { "georgian": "ა", "transliteration": "a", "french": "a" },
+        { "georgian": "ე", "transliteration": "e", "french": "é" },
+        { "georgian": "ი", "transliteration": "i", "french": "i" },
+        { "georgian": "ო", "transliteration": "o", "french": "o" },
+        { "georgian": "უ", "transliteration": "u", "french": "ou" }
+      ]
+    },
+    {
+      "id": "pron-4",
+      "title": "Consonnes difficiles",
+      "level": "A1",
+      "order": 4,
+      "words": [
+        { "georgian": "კ", "transliteration": "k'", "french": "k éjectif" },
+        { "georgian": "პ", "transliteration": "p'", "french": "p éjectif" },
+        { "georgian": "ტ", "transliteration": "t'", "french": "t éjectif" },
+        { "georgian": "ყ", "transliteration": "q'", "french": "q éjectif" },
+        { "georgian": "წ", "transliteration": "ts'", "french": "ts éjectif" },
+        { "georgian": "ჭ", "transliteration": "ch'", "french": "tch éjectif" }
+      ]
+    }
+  ]
+}

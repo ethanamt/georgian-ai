@@ -1,0 +1,168 @@
+{
+  "categories": [
+    {
+      "id": "greetings",
+      "name": "Salutations",
+      "icon": "👋",
+      "words": [
+        { "id": "voc-greet-1", "georgian": "გამარჯობა", "transliteration": "gamarjoba", "french": "bonjour", "difficulty": 1 },
+        { "id": "voc-greet-2", "georgian": "ნახვამდის", "transliteration": "nakhvamdis", "french": "au revoir", "difficulty": 1 },
+        { "id": "voc-greet-3", "georgian": "მადლობა", "transliteration": "madloba", "french": "merci", "difficulty": 1 },
+        { "id": "voc-greet-4", "georgian": "ბოდიში", "transliteration": "bodishi", "french": "pardon", "difficulty": 1 },
+        { "id": "voc-greet-5", "georgian": "კეთილი იყოს თქვენი მობრძანება", "transliteration": "ketili iqos tkveni mobrdzaneba", "french": "bienvenue", "difficulty": 3 }
+      ]
+    },
+    {
+      "id": "numbers",
+      "name": "Nombres",
+      "icon": "🔢",
+      "words": [
+        { "id": "voc-num-1", "georgian": "ერთი", "transliteration": "erti", "french": "un", "difficulty": 1 },
+        { "id": "voc-num-2", "georgian": "ორი", "transliteration": "ori", "french": "deux", "difficulty": 1 },
+        { "id": "voc-num-3", "georgian": "სამი", "transliteration": "sami", "french": "trois", "difficulty": 1 },
+        { "id": "voc-num-4", "georgian": "ოთხი", "transliteration": "otkhi", "french": "quatre", "difficulty": 1 },
+        { "id": "voc-num-5", "georgian": "ხუთი", "transliteration": "khuti", "french": "cinq", "difficulty": 1 },
+        { "id": "voc-num-6", "georgian": "ექვსი", "transliteration": "ekvsi", "french": "six", "difficulty": 2 },
+        { "id": "voc-num-7", "georgian": "შვიდი", "transliteration": "shvidi", "french": "sept", "difficulty": 2 },
+        { "id": "voc-num-8", "georgian": "რვა", "transliteration": "rva", "french": "huit", "difficulty": 2 },
+        { "id": "voc-num-9", "georgian": "ცხრა", "transliteration": "tskhra", "french": "neuf", "difficulty": 2 },
+        { "id": "voc-num-10", "georgian": "ათი", "transliteration": "ati", "french": "dix", "difficulty": 1 }
+      ]
+    },
+    {
+      "id": "family",
+      "name": "Famille",
+      "icon": "👨‍👩‍👧‍👦",
+      "words": [
+        { "id": "voc-fam-1", "georgian": "დედა", "transliteration": "deda", "french": "mère", "difficulty": 1 },
+        { "id": "voc-fam-2", "georgian": "მამა", "transliteration": "mama", "french": "père", "difficulty": 1 },
+        { "id": "voc-fam-3", "georgian": "და", "transliteration": "da", "french": "soeur", "difficulty": 1 },
+        { "id": "voc-fam-4", "georgian": "ძმა", "transliteration": "dzma", "french": "frère", "difficulty": 1 },
+        { "id": "voc-fam-5", "georgian": "შვილი", "transliteration": "shvili", "french": "enfant", "difficulty": 2 }
+      ]
+    },
+    {
+      "id": "colors",
+      "name": "Couleurs",
+      "icon": "🎨",
+      "words": [
+        { "id": "voc-color-1", "georgian": "თეთრი", "transliteration": "tetri", "french": "blanc", "difficulty": 1 },
+        { "id": "voc-color-2", "georgian": "შავი", "transliteration": "shavi", "french": "noir", "difficulty": 1 },
+        { "id": "voc-color-3", "georgian": "წითელი", "transliteration": "ts'iteli", "french": "rouge", "difficulty": 2 },
+        { "id": "voc-color-4", "georgian": "ლურჯი", "transliteration": "lurji", "french": "bleu", "difficulty": 2 },
+        { "id": "voc-color-5", "georgian": "მწვანე", "transliteration": "mts'vane", "french": "vert", "difficulty": 2 }
+      ]
+    },
+    {
+      "id": "food",
+      "name": "Nourriture",
+      "icon": "🍽️",
+      "words": [
+        { "id": "voc-food-1", "georgian": "პური", "transliteration": "p'uri", "french": "pain", "difficulty": 1 },
+        { "id": "voc-food-2", "georgian": "წყალი", "transliteration": "ts'qali", "french": "eau", "difficulty": 2 },
+        { "id": "voc-food-3", "georgian": "რძე", "transliteration": "rdze", "french": "lait", "difficulty": 2 },
+        { "id": "voc-food-4", "georgian": "ხორცი", "transliteration": "khortsi", "french": "viande", "difficulty": 2 },
+        { "id": "voc-food-5", "georgian": "ხილი", "transliteration": "khili", "french": "fruit", "difficulty": 1 }
+      ]
+    },
+    {
+      "id": "common-verbs",
+      "name": "Verbes courants",
+      "icon": "🏃",
+      "words": [
+        { "id": "voc-verb-1", "georgian": "ყოფნა", "transliteration": "q'opna", "french": "être", "difficulty": 2 },
+        { "id": "voc-verb-2", "georgian": "ქონა", "transliteration": "kona", "french": "avoir", "difficulty": 2 },
+        { "id": "voc-verb-3", "georgian": "სვლა", "transliteration": "svla", "french": "aller", "difficulty": 2 },
+        { "id": "voc-verb-4", "georgian": "თქმა", "transliteration": "tkma", "french": "dire", "difficulty": 2 },
+        { "id": "voc-verb-5", "georgian": "ნახვა", "transliteration": "nakhva", "french": "voir", "difficulty": 2 }
+      ]
+    },
+    {
+      "id": "time",
+      "name": "Temps & Heure",
+      "icon": "⏰",
+      "words": [
+        { "id": "voc-time-1", "georgian": "დღეს", "transliteration": "dghes", "french": "aujourd'hui", "difficulty": 1 },
+        { "id": "voc-time-2", "georgian": "ხვალ", "transliteration": "kval", "french": "demain", "difficulty": 1 },
+        { "id": "voc-time-3", "georgian": "გუშინ", "transliteration": "gushin", "french": "hier", "difficulty": 2 },
+        { "id": "voc-time-4", "georgian": "დილა", "transliteration": "dila", "french": "matin", "difficulty": 1 },
+        { "id": "voc-time-5", "georgian": "საღამო", "transliteration": "saghamo", "french": "soir", "difficulty": 1 }
+      ]
+    },
+    {
+      "id": "house",
+      "name": "Maison",
+      "icon": "🏠",
+      "words": [
+        { "id": "voc-house-1", "georgian": "სახლი", "transliteration": "sakhli", "french": "maison", "difficulty": 1 },
+        { "id": "voc-house-2", "georgian": "კარი", "transliteration": "kari", "french": "porte", "difficulty": 1 },
+        { "id": "voc-house-3", "georgian": "ფანჯარა", "transliteration": "panjara", "french": "fenêtre", "difficulty": 2 },
+        { "id": "voc-house-4", "georgian": "საწოლი", "transliteration": "sats'oli", "french": "lit", "difficulty": 2 },
+        { "id": "voc-house-5", "georgian": "სკამი", "transliteration": "skami", "french": "chaise", "difficulty": 1 }
+      ]
+    },
+    {
+      "id": "city",
+      "name": "Ville",
+      "icon": "🏙️",
+      "words": [
+        { "id": "voc-city-1", "georgian": "ქალაქი", "transliteration": "kalaki", "french": "ville", "difficulty": 1 },
+        { "id": "voc-city-2", "georgian": "ქუჩა", "transliteration": "kucha", "french": "rue", "difficulty": 1 },
+        { "id": "voc-city-3", "georgian": "მაღაზია", "transliteration": "maghazia", "french": "magasin", "difficulty": 2 },
+        { "id": "voc-city-4", "georgian": "სკოლა", "transliteration": "skola", "french": "école", "difficulty": 1 },
+        { "id": "voc-city-5", "georgian": "საავადმყოფო", "transliteration": "saavadmq'opo", "french": "hôpital", "difficulty": 3 }
+      ]
+    },
+    {
+      "id": "travel",
+      "name": "Voyage",
+      "icon": "✈️",
+      "words": [
+        { "id": "voc-travel-1", "georgian": "მატარებელი", "transliteration": "matarebeli", "french": "train", "difficulty": 2 },
+        { "id": "voc-travel-2", "georgian": "ავტობუსი", "transliteration": "avt'obusi", "french": "bus", "difficulty": 1 },
+        { "id": "voc-travel-3", "georgian": "ტაქსი", "transliteration": "t'aksi", "french": "taxi", "difficulty": 1 },
+        { "id": "voc-travel-4", "georgian": "ბილეთი", "transliteration": "bileti", "french": "billet", "difficulty": 2 },
+        { "id": "voc-travel-5", "georgian": "აეროპორტი", "transliteration": "aerop'ort'i", "french": "aéroport", "difficulty": 2 }
+      ]
+    },
+    {
+      "id": "body",
+      "name": "Corps humain",
+      "icon": "🫃",
+      "words": [
+        { "id": "voc-body-1", "georgian": "თავი", "transliteration": "tavi", "french": "tête", "difficulty": 1 },
+        { "id": "voc-body-2", "georgian": "ხელი", "transliteration": "kheli", "french": "main", "difficulty": 1 },
+        { "id": "voc-body-3", "georgian": "ფეხი", "transliteration": "pekhi", "french": "pied", "difficulty": 1 },
+        { "id": "voc-body-4", "georgian": "თვალი", "transliteration": "tvali", "french": "oeil", "difficulty": 1 },
+        { "id": "voc-body-5", "georgian": "ყური", "transliteration": "q'uri", "french": "oreille", "difficulty": 2 },
+        { "id": "voc-body-6", "georgian": "პირი", "transliteration": "p'iri", "french": "bouche", "difficulty": 1 }
+      ]
+    },
+    {
+      "id": "weather",
+      "name": "Météo",
+      "icon": "🌤️",
+      "words": [
+        { "id": "voc-weather-1", "georgian": "მზე", "transliteration": "mze", "french": "soleil", "difficulty": 1 },
+        { "id": "voc-weather-2", "georgian": "წვიმა", "transliteration": "ts'vima", "french": "pluie", "difficulty": 2 },
+        { "id": "voc-weather-3", "georgian": "თოვლი", "transliteration": "tovli", "french": "neige", "difficulty": 2 },
+        { "id": "voc-weather-4", "georgian": "ქარი", "transliteration": "kari", "french": "vent", "difficulty": 1 },
+        { "id": "voc-weather-5", "georgian": "თბილი", "transliteration": "tbili", "french": "chaud", "difficulty": 1 },
+        { "id": "voc-weather-6", "georgian": "ცივი", "transliteration": "tsivi", "french": "froid", "difficulty": 1 }
+      ]
+    },
+    {
+      "id": "adjectives",
+      "name": "Adjectifs courants",
+      "icon": "✨",
+      "words": [
+        { "id": "voc-adj-1", "georgian": "დიდი", "transliteration": "didi", "french": "grand", "difficulty": 1 },
+        { "id": "voc-adj-2", "georgian": "პატარა", "transliteration": "p'at'ara", "french": "petit", "difficulty": 1 },
+        { "id": "voc-adj-3", "georgian": "კარგი", "transliteration": "k'argi", "french": "bon", "difficulty": 1 },
+        { "id": "voc-adj-4", "georgian": "ცუდი", "transliteration": "tsudi", "french": "mauvais", "difficulty": 1 },
+        { "id": "voc-adj-5", "georgian": "ახალი", "transliteration": "akhali", "french": "nouveau", "difficulty": 1 },
+        { "id": "voc-adj-6", "georgian": "ძველი", "transliteration": "dzveli", "french": "vieux", "difficulty": 2 }
+      ]
+    }
+  ]
+}

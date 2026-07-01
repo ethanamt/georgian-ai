@@ -1,0 +1,386 @@
+{
+  "texts": [
+    {
+      "id": "read-1",
+      "title": "გამარჯობა!",
+      "titleFr": "Bonjour !",
+      "level": "A1",
+      "order": 1,
+      "estimatedMinutes": 5,
+      "vocabularyIds": ["voc-greet-1", "voc-greet-2", "voc-greet-3"],
+      "paragraphs": [
+        {
+          "georgian": "გამარჯობა! მე ვარ ნინო.",
+          "transliteration": "Gamarjoba! Me var Nino.",
+          "french": "Bonjour ! Je suis Nino.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "მე ვარ სტუდენტი.",
+          "transliteration": "Me var student'i.",
+          "french": "Je suis étudiante.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "მე ვცხოვრობ თბილისში.",
+          "transliteration": "Me vtskhovrob Tbilisshi.",
+          "french": "J'habite à Tbilissi.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "ნახვამდის!",
+          "transliteration": "Nakhvamdis!",
+          "french": "Au revoir !",
+          "audioSlow": false
+        }
+      ],
+      "questions": [
+        {
+          "question": "Comment s'appelle la personne ?",
+          "options": ["Nino", "Tbilissi", "Étudiante"],
+          "correctIndex": 0
+        },
+        {
+          "question": "Où habite-t-elle ?",
+          "options": ["À Paris", "À Tbilissi", "À Moscou"],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "read-2",
+      "title": "ჩემი ოჯახი",
+      "titleFr": "Ma famille",
+      "level": "A1",
+      "order": 2,
+      "estimatedMinutes": 5,
+      "vocabularyIds": ["voc-fam-1", "voc-fam-2", "voc-fam-3", "voc-fam-4"],
+      "paragraphs": [
+        {
+          "georgian": "ეს არის ჩემი ოჯახი.",
+          "transliteration": "Es aris chemi oj akhi.",
+          "french": "Voici ma famille.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "ჩემი დედა ლამაზია.",
+          "transliteration": "Chemi deda lamazia.",
+          "french": "Ma mère est belle.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "ჩემი მამა ექიმია.",
+          "transliteration": "Chemi mama ekimia.",
+          "french": "Mon père est médecin.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "მე მყავს ერთი და და ერთი ძმა.",
+          "transliteration": "Me mqavs erti da da erti dzma.",
+          "french": "J'ai une soeur et un frère.",
+          "audioSlow": true
+        }
+      ],
+      "questions": [
+        {
+          "question": "Que fait le père ?",
+          "options": ["Il est professeur", "Il est médecin", "Il est étudiant"],
+          "correctIndex": 1
+        },
+        {
+          "question": "Combien de soeurs a-t-elle ?",
+          "options": ["Deux", "Une", "Trois"],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "read-3",
+      "title": "ფერები",
+      "titleFr": "Les couleurs",
+      "level": "A1",
+      "order": 3,
+      "estimatedMinutes": 5,
+      "vocabularyIds": ["voc-color-1", "voc-color-2", "voc-color-3", "voc-color-4", "voc-color-5"],
+      "paragraphs": [
+        {
+          "georgian": "მე მიყვარს ფერები.",
+          "transliteration": "Me miq'vars perebi.",
+          "french": "J'aime les couleurs.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "ჩემი საყვარელი ფერი არის ლურჯი.",
+          "transliteration": "Chemi saq'vareli peri aris lurji.",
+          "french": "Ma couleur préférée est le bleu.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "ეს მანქანა წითელია.",
+          "transliteration": "Es mankana ts'itel ia.",
+          "french": "Cette voiture est rouge.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "ის სახლი თეთრია.",
+          "transliteration": "Is sakhli tetria.",
+          "french": "Cette maison-là est blanche.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "ცა ლურჯია და ბალახი მწვანე.",
+          "transliteration": "Tsa lurjia da balakhi mts'vane.",
+          "french": "Le ciel est bleu et l'herbe est verte.",
+          "audioSlow": true
+        }
+      ],
+      "questions": [
+        {
+          "question": "Quelle est la couleur préférée ?",
+          "options": ["Rouge", "Bleu", "Vert"],
+          "correctIndex": 1
+        },
+        {
+          "question": "De quelle couleur est la maison ?",
+          "options": ["Rouge", "Blanche", "Bleue"],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "read-4",
+      "title": "რიცხვები",
+      "titleFr": "Les nombres",
+      "level": "A1",
+      "order": 4,
+      "estimatedMinutes": 5,
+      "vocabularyIds": ["voc-num-1", "voc-num-2", "voc-num-3"],
+      "paragraphs": [
+        {
+          "georgian": "ერთი, ორი, სამი — ვითვლი გეორგიულად.",
+          "transliteration": "Erti, ori, sami — vitvli georgiulad.",
+          "french": "Un, deux, trois — je compte en géorgien.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "ოთხი, ხუთი, ექვსი.",
+          "transliteration": "Otkh i, khuti, ekvsi.",
+          "french": "Quatre, cinq, six.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "შვიდი, რვა, ცხრა, ათი.",
+          "transliteration": "Shvidi, rva, tskhra, ati.",
+          "french": "Sept, huit, neuf, dix.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "მე ვარ ათი წლის.",
+          "transliteration": "Me var ati ts'lis.",
+          "french": "J'ai dix ans.",
+          "audioSlow": true
+        }
+      ],
+      "questions": [
+        {
+          "question": "Comment dit-on « trois » en géorgien ?",
+          "options": ["ორი", "სამი", "ხუთი"],
+          "correctIndex": 1
+        },
+        {
+          "question": "Quel âge a la personne ?",
+          "options": ["5 ans", "10 ans", "7 ans"],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "read-5",
+      "title": "რესტორანში",
+      "titleFr": "Au restaurant",
+      "level": "A1",
+      "order": 5,
+      "estimatedMinutes": 5,
+      "vocabularyIds": ["voc-food-1", "voc-food-2", "voc-food-3", "voc-food-4"],
+      "paragraphs": [
+        {
+          "georgian": "მე მივდივარ რესტორანში.",
+          "transliteration": "Me mivdivar rest'oranshi.",
+          "french": "Je vais au restaurant.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "მინდა პური და წყალი.",
+          "transliteration": "Minda p'uri da ts'qali.",
+          "french": "Je voudrais du pain et de l'eau.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "მინდა ხორციც.",
+          "transliteration": "Minda khortsits.",
+          "french": "Je voudrais aussi de la viande.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "მადლობა! ძალიან გემრიელია.",
+          "transliteration": "Madloba! Dzalian gemrielia.",
+          "french": "Merci ! C'est très bon.",
+          "audioSlow": true
+        }
+      ],
+      "questions": [
+        {
+          "question": "Que commande la personne ?",
+          "options": ["Du pain et du lait", "Du pain et de l'eau", "De la viande et du pain"],
+          "correctIndex": 1
+        },
+        {
+          "question": "Que dit-elle à la fin ?",
+          "options": ["Au revoir", "C'est très bon", "L'addition"],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "read-6",
+      "title": "ჩემი ქალაქი",
+      "titleFr": "Ma ville",
+      "level": "A1",
+      "order": 6,
+      "estimatedMinutes": 5,
+      "vocabularyIds": ["voc-greet-1", "voc-num-1"],
+      "paragraphs": [
+        {
+          "georgian": "მე ვცხოვრობ თბილისში.",
+          "transliteration": "Me vtskhovrob Tbilisshi.",
+          "french": "J'habite à Tbilissi.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "თბილისი ლამაზი ქალაქია.",
+          "transliteration": "Tbilisi lamazi kalakia.",
+          "french": "Tbilissi est une belle ville.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "აქ არის დიდი მდინარე.",
+          "transliteration": "Ak aris didi mdinare.",
+          "french": "Ici il y a une grande rivière.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "მე მიყვარს თბილისი!",
+          "transliteration": "Me miq'vars Tbilisi!",
+          "french": "J'aime Tbilissi !",
+          "audioSlow": false
+        }
+      ],
+      "questions": [
+        {
+          "question": "Où habite la personne ?",
+          "options": ["À Paris", "À Tbilissi", "À Berlin"],
+          "correctIndex": 1
+        },
+        {
+          "question": "Qu'y a-t-il dans la ville ?",
+          "options": ["Une montagne", "Une rivière", "Un lac"],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "read-7",
+      "title": "საყიდლები",
+      "titleFr": "Les courses",
+      "level": "A1",
+      "order": 7,
+      "estimatedMinutes": 5,
+      "vocabularyIds": ["voc-city-3", "voc-food-1", "voc-food-2", "voc-food-4"],
+      "paragraphs": [
+        {
+          "georgian": "მე მივდივარ მაღაზიაში.",
+          "transliteration": "Me mivdivar maghaziashi.",
+          "french": "Je vais au magasin.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "ვყიდულობ პურს, რძეს და ხორცს.",
+          "transliteration": "Vq'idulob p'urs, rdzes da khortss.",
+          "french": "J'achète du pain, du lait et de la viande.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "მაღაზია დიდია და ლამაზი.",
+          "transliteration": "Maghazia didia da lamazi.",
+          "french": "Le magasin est grand et beau.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "მადლობა, ნახვამდის!",
+          "transliteration": "Madloba, nakhvamdis!",
+          "french": "Merci, au revoir !",
+          "audioSlow": false
+        }
+      ],
+      "questions": [
+        {
+          "question": "Où va la personne ?",
+          "options": ["Au restaurant", "Au magasin", "À l'école"],
+          "correctIndex": 1
+        },
+        {
+          "question": "Qu'achète-t-elle ?",
+          "options": ["Du pain, du lait et du fromage", "Du pain, du lait et de la viande", "Du pain, du vin et de la viande"],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "read-8",
+      "title": "ამინდი",
+      "titleFr": "Le temps qu'il fait",
+      "level": "A2",
+      "order": 8,
+      "estimatedMinutes": 5,
+      "vocabularyIds": ["voc-weather-1", "voc-weather-2", "voc-weather-3", "voc-weather-4"],
+      "paragraphs": [
+        {
+          "georgian": "დღეს მზიანი დღეა.",
+          "transliteration": "Dghes mziani dghea.",
+          "french": "Aujourd'hui est une journée ensoleillée.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "ცა ლურჯია და ქარი არ არის.",
+          "transliteration": "Tsa lurjia da kari ar aris.",
+          "french": "Le ciel est bleu et il n'y a pas de vent.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "თბილა, მაგრამ გუშინ წვიმდა.",
+          "transliteration": "Tbila, magram gushin ts'vimda.",
+          "french": "Il fait chaud, mais hier il pleuvait.",
+          "audioSlow": true
+        },
+        {
+          "georgian": "ხვალ მთელი დღე იწვიმებს.",
+          "transliteration": "Kval mteli dghe its'vimebs.",
+          "french": "Demain il pleuvra toute la journée.",
+          "audioSlow": true
+        }
+      ],
+      "questions": [
+        {
+          "question": "Quel temps fait-il aujourd'hui ?",
+          "options": ["Pluvieux", "Ensoleillé", "Neigeux"],
+          "correctIndex": 1
+        },
+        {
+          "question": "Quel temps faisait-il hier ?",
+          "options": ["Il neigeait", "Il pleuvait", "Il faisait chaud"],
+          "correctIndex": 1
+        }
+      ]
+    }
+  ]
+}
