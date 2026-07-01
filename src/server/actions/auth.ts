@@ -4,17 +4,19 @@ import { createClient } from "@/lib/supabase/server";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
+export type AuthState = { error: string | null; success: boolean };
+
 export async function signIn(
-  prevState: { error: string | null; success?: boolean },
+  prevState: AuthState,
   formData: FormData
-) {
+): Promise<AuthState> {
   const supabase = await createClient();
 
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
 
   if (!email || !password) {
-    return { error: "Email et mot de passe requis" };
+    return { error: "Email et mot de passe requis", success: false };
   }
 
   const { error } = await supabase.auth.signInWithPassword({
@@ -23,7 +25,7 @@ export async function signIn(
   });
 
   if (error) {
-    return { error: error.message };
+    return { error: error.message, success: false };
   }
 
   revalidatePath("/", "layout");
@@ -31,9 +33,9 @@ export async function signIn(
 }
 
 export async function signUp(
-  prevState: { error: string | null; success?: boolean },
+  prevState: AuthState,
   formData: FormData
-) {
+): Promise<AuthState> {
   const supabase = await createClient();
 
   const email = formData.get("email") as string;
@@ -41,7 +43,7 @@ export async function signUp(
   const displayName = formData.get("displayName") as string;
 
   if (!email || !password) {
-    return { error: "Email et mot de passe requis" };
+    return { error: "Email et mot de passe requis", success: false };
   }
 
   const {
@@ -53,7 +55,7 @@ export async function signUp(
   });
 
   if (authError || !user) {
-    return { error: authError?.message || "Erreur lors de l'inscription" };
+    return { error: authError?.message || "Erreur lors de l'inscription", success: false };
   }
 
   if (displayName) {

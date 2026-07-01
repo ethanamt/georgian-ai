@@ -4,7 +4,7 @@ export const dynamic = "force-dynamic";
 
 import { useActionState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { signUp } from "@/server/actions/auth";
+import { signUp, type AuthState } from "@/server/actions/auth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -12,13 +12,13 @@ import { Label } from "@/components/ui/label";
 
 export default function RegisterPage() {
   const router = useRouter();
-  const [state, action, pending] = useActionState(signUp, { error: null as string | null });
+  const [state, action, pending] = useActionState(signUp, { error: null, success: false });
 
   useEffect(() => {
-    if (state?.success) {
+    if (state.success) {
       router.push("/today");
     }
-  }, [state?.success, router]);
+  }, [state.success, router]);
 
   return (
     <div className="flex min-h-screen items-center justify-center px-4">
@@ -43,7 +43,7 @@ export default function RegisterPage() {
               <Label htmlFor="password">Mot de passe</Label>
               <Input id="password" name="password" type="password" required />
             </div>
-            {state?.error && (
+            {state.error && (
               <p className="text-sm text-destructive">{state.error}</p>
             )}
             <Button type="submit" className="w-full" disabled={pending}>
