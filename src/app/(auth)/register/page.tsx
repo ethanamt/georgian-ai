@@ -2,7 +2,8 @@
 
 export const dynamic = "force-dynamic";
 
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { signUp } from "@/server/actions/auth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,7 +11,14 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 export default function RegisterPage() {
+  const router = useRouter();
   const [state, action, pending] = useActionState(signUp, { error: null as string | null });
+
+  useEffect(() => {
+    if (state?.success) {
+      router.push("/today");
+    }
+  }, [state?.success, router]);
 
   return (
     <div className="flex min-h-screen items-center justify-center px-4">

@@ -5,7 +5,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 export async function signIn(
-  prevState: { error: string | null },
+  prevState: { error: string | null; success?: boolean },
   formData: FormData
 ) {
   const supabase = await createClient();
@@ -17,25 +17,21 @@ export async function signIn(
     return { error: "Email et mot de passe requis" };
   }
 
-  try {
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
+  const { error } = await supabase.auth.signInWithPassword({
+    email,
+    password,
+  });
 
-    if (error) {
-      return { error: error.message };
-    }
-  } catch (err) {
-    return { error: err instanceof Error ? err.message : "Erreur serveur" };
+  if (error) {
+    return { error: error.message };
   }
 
   revalidatePath("/", "layout");
-  redirect("/today");
+  return { error: null, success: true };
 }
 
 export async function signUp(
-  prevState: { error: string | null },
+  prevState: { error: string | null; success?: boolean },
   formData: FormData
 ) {
   const supabase = await createClient();
@@ -48,28 +44,24 @@ export async function signUp(
     return { error: "Email et mot de passe requis" };
   }
 
-  try {
-    const {
-      data: { user },
-      error: authError,
-    } = await supabase.auth.signUp({
-      email,
-      password,
-    });
+  const {
+    data: { user },
+    error: authError,
+  } = await supabase.auth.signUp({
+    email,
+    password,
+  });
 
-    if (authError || !user) {
-      return { error: authError?.message || "Erreur lors de l'inscription" };
-    }
+  if (authError || !user) {
+    return { error: authError?.message || "Erreur lors de l'inscription" };
+  }
 
-    if (displayName) {
-      await supabase.from("profiles").update({ display_name: displayName }).eq("id", user.id);
-    }
-  } catch (err) {
-    return { error: err instanceof Error ? err.message : "Erreur serveur" };
+  if (displayName) {
+    await supabase.from("profiles").update({ display_name: displayName }).eq("id", user.id);
   }
 
   revalidatePath("/", "layout");
-  redirect("/today");
+  return { error: null, success: true };
 }
 
 export async function signOut() {
