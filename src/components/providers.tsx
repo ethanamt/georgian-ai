@@ -9,11 +9,12 @@ const SupabaseContext = createContext<ReturnType<
 > | null>(null);
 
 export function Providers({ children }: { children: React.ReactNode }) {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   const [supabase] = useState(() =>
-    createBrowserClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-    )
+    url && key
+      ? createBrowserClient(url, key)
+      : null
   );
 
   return (
@@ -28,4 +29,8 @@ export const useSupabase = () => {
   const context = useContext(SupabaseContext);
   if (!context) throw new Error("useSupabase must be used within Providers");
   return context;
+};
+
+export const useSupabaseOrNull = () => {
+  return useContext(SupabaseContext);
 };
