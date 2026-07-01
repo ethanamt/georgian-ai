@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { getUser } from "@/server/actions/auth";
 import { signOut } from "@/server/actions/auth";
 import { getUserProgress } from "@/server/actions/progress";

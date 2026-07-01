@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { getDueCards } from "@/server/actions/srs";
 import { ReviewSession } from "@/components/flashcards/ReviewSession";
 

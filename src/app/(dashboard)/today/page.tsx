@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { getUser } from "@/server/actions/auth";
 import { getUserProgress } from "@/server/actions/progress";
 import { Button } from "@/components/ui/button";
