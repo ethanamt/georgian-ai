@@ -61,17 +61,9 @@ export async function signUp(
       return { error: authError?.message || "Erreur lors de l'inscription" };
     }
 
-    const { error: profileError } = await supabase.from("profiles").insert({
-      id: user.id,
-      email,
-      display_name: displayName || null,
-    });
-
-    if (profileError) {
-      return { error: "Erreur lors de la création du profil" };
+    if (displayName) {
+      await supabase.from("profiles").update({ display_name: displayName }).eq("id", user.id);
     }
-
-    await supabase.from("settings").insert({ user_id: user.id });
   } catch (err) {
     return { error: err instanceof Error ? err.message : "Erreur serveur" };
   }
