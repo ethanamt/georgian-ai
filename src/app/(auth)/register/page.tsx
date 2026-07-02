@@ -46,8 +46,24 @@ export default function RegisterPage() {
         return;
       }
 
-      if (displayName) {
-        await supabase.from("profiles").update({ display_name: displayName }).eq("id", user.id);
+      const { error: profileError } = await supabase
+        .from("profiles")
+        .insert({ id: user.id, email: user.email!, display_name: displayName || null });
+      if (profileError) {
+        console.error("profile insert error:", profileError);
+        setError("Erreur lors de la création du profil");
+        setPending(false);
+        return;
+      }
+
+      const { error: settingsError } = await supabase
+        .from("settings")
+        .insert({ user_id: user.id });
+      if (settingsError) {
+        console.error("settings insert error:", settingsError);
+        setError("Erreur lors de la création des paramètres");
+        setPending(false);
+        return;
       }
 
       router.push("/today");
