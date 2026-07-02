@@ -28,23 +28,16 @@ export function ReadingCard({
   };
 
   return (
-    <div className="rounded-xl border border-border bg-card p-4 space-y-2">
+    <div className="rounded-2xl border border-white/8 bg-[#0e0e10] p-5 space-y-3 transition-all hover:border-white/15">
       <div className="flex items-start justify-between gap-2">
-        <p className="georgian-text text-lg leading-relaxed flex-1">
-          {georgian}
-        </p>
-        <button
-          onClick={handleSpeak}
-          className="shrink-0 p-1.5 rounded-full hover:bg-muted transition-colors"
-        >
-          <Volume2 className="size-4 text-primary" />
+        <p className="georgian-text text-lg leading-relaxed flex-1">{georgian}</p>
+        <button onClick={handleSpeak} className="shrink-0 p-2 rounded-full border border-white/10 hover:bg-white/5 transition-colors">
+          <Volume2 className="size-3.5" />
         </button>
       </div>
       <p className="text-sm italic text-muted-foreground">{transliteration}</p>
       {showTranslation && (
-        <p className="text-sm font-medium text-foreground/80 border-t border-border pt-2">
-          {french}
-        </p>
+        <p className="text-sm text-muted-foreground/80 border-t border-white/10 pt-3">{french}</p>
       )}
     </div>
   );

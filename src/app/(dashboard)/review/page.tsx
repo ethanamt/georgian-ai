@@ -8,9 +8,7 @@ export default async function ReviewPage() {
 
   return (
     <div className="mx-auto max-w-lg px-4 py-8">
-      <h1 className="text-3xl font-heading font-semibold mb-6 text-center">
-        Révision
-      </h1>
+      <h1 className="font-heading text-2xl font-bold tracking-tight text-center mb-8">Révision</h1>
       <ReviewSession cards={cards} />
     </div>
   );

@@ -1,35 +1,27 @@
 import { getLessons } from "@/lib/lessons";
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 export default function GrammarPage() {
   const lessons = getLessons();
 
   return (
-    <div className="mx-auto max-w-lg space-y-6 px-4 py-8">
-      <h1 className="text-3xl font-heading font-semibold">Grammaire</h1>
+    <div className="mx-auto max-w-2xl space-y-6 px-4 py-8">
+      <h1 className="font-heading text-2xl font-bold tracking-tight">Grammaire</h1>
       <div className="space-y-3">
         {lessons.map((lesson) => (
-          <Link key={lesson.slug} href={`/grammar/${lesson.slug}`}>
-            <Card className="hover:shadow-md transition-shadow">
-              <CardHeader className="p-4 pb-2">
-                <div className="flex items-start justify-between">
-                  <CardTitle className="text-lg">{lesson.title}</CardTitle>
-                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                    <span>{lesson.estimatedMinutes} min</span>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent className="p-4 pt-0 space-y-2">
-                <p className="text-sm text-muted-foreground">
-                  {lesson.description}
-                </p>
-                <Badge variant="secondary" className="text-[10px]">
-                  {lesson.level}
-                </Badge>
-              </CardContent>
-            </Card>
+          <Link
+            key={lesson.slug}
+            href={`/grammar/${lesson.slug}`}
+            className="flex items-center justify-between rounded-2xl border border-white/6 bg-[#0e0e10] px-6 py-5 transition-all hover:border-white/15 hover:-translate-y-0.5"
+          >
+            <div>
+              <p className="font-heading text-base font-semibold">{lesson.title}</p>
+              <p className="text-sm text-muted-foreground">{lesson.description}</p>
+            </div>
+            <div className="flex items-center gap-3 text-xs text-muted-foreground">
+              <span className="rounded-full border border-white/10 px-2.5 py-0.5">{lesson.level}</span>
+              <span>{lesson.estimatedMinutes} min</span>
+            </div>
           </Link>
         ))}
       </div>

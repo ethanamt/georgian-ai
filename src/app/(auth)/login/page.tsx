@@ -5,10 +5,7 @@ export const dynamic = "force-dynamic";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useSupabaseOrNull } from "@/components/providers";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import Link from "next/link";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -40,42 +37,55 @@ export default function LoginPage() {
 
       router.push("/today");
     } catch (err) {
-      console.error("signIn error:", err);
       setError(err instanceof Error ? err.message : "Erreur inconnue");
       setPending(false);
     }
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center px-4">
-      <Card className="w-full max-w-sm">
-        <CardHeader className="text-center">
-          <CardTitle className="text-2xl font-heading">Connexion</CardTitle>
-          <CardDescription>
-            Connectez-vous pour continuer votre apprentissage
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
-              <Input id="email" name="email" type="email" required />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="password">Mot de passe</Label>
-              <Input id="password" name="password" type="password" required />
-            </div>
-            {error && <p className="text-sm text-destructive">{error}</p>}
-            <Button type="submit" className="w-full" disabled={pending}>
-              {pending ? "Connexion..." : "Se connecter"}
-            </Button>
-          </form>
-          <p className="mt-4 text-center text-sm text-muted-foreground">
-            Pas encore de compte ?{" "}
-            <a href="/register" className="text-primary hover:underline">S&apos;inscrire</a>
-          </p>
-        </CardContent>
-      </Card>
+    <div className="flex min-h-screen flex-col items-center justify-center px-4">
+      <div className="w-full max-w-sm">
+        <div className="mb-10 text-center">
+          <h1 className="font-heading text-3xl font-bold tracking-tight">Connexion</h1>
+          <p className="mt-2 text-sm text-muted-foreground">Connectez-vous pour continuer</p>
+        </div>
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <div className="space-y-1.5">
+            <label htmlFor="email" className="text-xs font-medium text-muted-foreground">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              className="w-full rounded-xl border border-white/10 bg-[#0e0e10] px-4 py-3 text-sm outline-none transition-colors focus:border-white/30"
+            />
+          </div>
+          <div className="space-y-1.5">
+            <label htmlFor="password" className="text-xs font-medium text-muted-foreground">Mot de passe</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              required
+              className="w-full rounded-xl border border-white/10 bg-[#0e0e10] px-4 py-3 text-sm outline-none transition-colors focus:border-white/30"
+            />
+          </div>
+          {error && <p className="text-xs text-destructive">{error}</p>}
+          <button
+            type="submit"
+            disabled={pending}
+            className="w-full rounded-full bg-white px-6 py-3 text-sm font-bold text-black transition-all hover:scale-[1.02] hover:shadow-[0_0_24px_rgba(255,255,255,.1)] disabled:opacity-50"
+          >
+            {pending ? "Connexion..." : "Se connecter"}
+          </button>
+        </form>
+        <p className="mt-8 text-center text-xs text-muted-foreground">
+          Pas encore de compte ?{" "}
+          <Link href="/register" className="underline underline-offset-4 hover:text-foreground">
+            S&apos;inscrire
+          </Link>
+        </p>
+      </div>
     </div>
   );
 }

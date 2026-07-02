@@ -1,34 +1,26 @@
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const practiceTypes = [
-  {
-    href: "/practice/alphabet-qcm",
-    title: "Reconnaître l'alphabet",
-    desc: "QCM — Quelle lettre est-ce ?",
-  },
-  {
-    href: "/practice/vocabulary",
-    title: "Vocabulaire",
-    desc: "Associez mots géorgiens et français",
-  },
+  { href: "/practice/alphabet-qcm", title: "Reconnaître l'alphabet", desc: "QCM — Quelle lettre est-ce ?" },
+  { href: "/practice/vocabulary", title: "Vocabulaire", desc: "Associez mots géorgiens et français" },
 ];
 
 export default function PracticePage() {
   return (
-    <div className="mx-auto max-w-lg space-y-6 px-4 py-8">
-      <h1 className="text-3xl font-heading font-semibold">Pratique</h1>
+    <div className="mx-auto max-w-2xl space-y-6 px-4 py-8">
+      <h1 className="font-heading text-2xl font-bold tracking-tight">Pratique</h1>
       <div className="space-y-3">
         {practiceTypes.map((p) => (
-          <Link key={p.href} href={p.href}>
-            <Card className="hover:shadow-md transition-shadow">
-              <CardHeader className="p-4 pb-2">
-                <CardTitle className="text-lg">{p.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="p-4 pt-0 text-sm text-muted-foreground">
-                {p.desc}
-              </CardContent>
-            </Card>
+          <Link
+            key={p.href}
+            href={p.href}
+            className="flex items-center justify-between rounded-2xl border border-white/6 bg-[#0e0e10] px-6 py-5 transition-all hover:border-white/15 hover:-translate-y-0.5"
+          >
+            <div>
+              <p className="font-heading text-base font-semibold">{p.title}</p>
+              <p className="text-sm text-muted-foreground">{p.desc}</p>
+            </div>
+            <span className="text-sm text-muted-foreground">→</span>
           </Link>
         ))}
       </div>

@@ -1,32 +1,26 @@
 import { getPronExercises } from "@/lib/pronunciation";
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 export default function PronunciationPage() {
   const exercises = getPronExercises();
 
   return (
-    <div className="mx-auto max-w-lg space-y-6 px-4 py-8">
-      <h1 className="text-3xl font-heading font-semibold">Prononciation</h1>
+    <div className="mx-auto max-w-2xl space-y-6 px-4 py-8">
+      <h1 className="font-heading text-2xl font-bold tracking-tight">Prononciation</h1>
       <div className="space-y-3">
         {exercises.map((ex) => (
-          <Link key={ex.id} href={`/pronunciation/${ex.id}`}>
-            <Card className="hover:shadow-md transition-shadow">
-              <CardHeader className="p-4 pb-2">
-                <div className="flex items-start justify-between">
-                  <CardTitle className="text-lg">{ex.title}</CardTitle>
-                  <span className="text-xs text-muted-foreground">
-                    {ex.words.length} mot{ex.words.length > 1 ? "s" : ""}
-                  </span>
-                </div>
-              </CardHeader>
-              <CardContent className="p-4 pt-0">
-                <Badge variant="secondary" className="text-[10px]">
-                  {ex.level}
-                </Badge>
-              </CardContent>
-            </Card>
+          <Link
+            key={ex.id}
+            href={`/pronunciation/${ex.id}`}
+            className="flex items-center justify-between rounded-2xl border border-white/6 bg-[#0e0e10] px-6 py-5 transition-all hover:border-white/15 hover:-translate-y-0.5"
+          >
+            <div>
+              <p className="font-heading text-base font-semibold">{ex.title}</p>
+            </div>
+            <div className="flex items-center gap-3 text-xs text-muted-foreground">
+              <span className="rounded-full border border-white/10 px-2.5 py-0.5">{ex.level}</span>
+              <span>{ex.words.length} mot{ex.words.length > 1 ? "s" : ""}</span>
+            </div>
           </Link>
         ))}
       </div>

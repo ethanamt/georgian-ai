@@ -4,7 +4,6 @@ import Link from "next/link";
 import { ReadingCard } from "@/components/reading/ReadingCard";
 import { ReadingExercise } from "@/components/reading/ReadingExercise";
 import { ArrowLeft } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 
 export default async function ReadingTextPage({
   params,
@@ -16,41 +15,27 @@ export default async function ReadingTextPage({
   if (!text) notFound();
 
   return (
-    <div className="mx-auto max-w-lg px-4 py-8 space-y-6">
-      <div className="flex items-center gap-2">
-        <Link
-          href="/reading"
-          className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <ArrowLeft className="size-4 inline mr-1" />
-          Lecture
-        </Link>
-      </div>
+    <div className="mx-auto max-w-2xl px-4 py-8 space-y-6">
+      <Link href="/reading" className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors">
+        <ArrowLeft className="size-3" />
+        Lecture
+      </Link>
 
-      <div className="space-y-1">
-        <h1 className="text-2xl font-heading font-semibold georgian-text">
-          {text.title}
-        </h1>
-        <div className="flex items-center gap-2">
-          <p className="text-sm text-muted-foreground">{text.titleFr}</p>
-          <Badge variant="secondary" className="text-[10px]">
-            {text.level}
-          </Badge>
+      <div>
+        <h1 className="font-heading text-xl font-bold georgian-text">{text.title}</h1>
+        <div className="flex items-center gap-2 mt-1">
+          <p className="text-xs text-muted-foreground">{text.titleFr}</p>
+          <span className="rounded-full border border-white/10 px-2.5 py-0.5 text-[10px] text-muted-foreground">{text.level}</span>
         </div>
       </div>
 
-      <div className="space-y-3">
+      <div className="space-y-4">
         {text.paragraphs.map((p, i) => (
-          <ReadingCard
-            key={i}
-            georgian={p.georgian}
-            transliteration={p.transliteration}
-            french={p.french}
-          />
+          <ReadingCard key={i} georgian={p.georgian} transliteration={p.transliteration} french={p.french} />
         ))}
       </div>
 
-      <div className="border-t border-border pt-6">
+      <div className="border-t border-white/10 pt-6">
         <ReadingExercise questions={text.questions} />
       </div>
     </div>

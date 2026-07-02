@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { User, Zap, BookOpen } from "lucide-react";
+import { User } from "lucide-react";
 
 interface HeaderProps {
   streakDays?: number;
@@ -9,28 +9,20 @@ interface HeaderProps {
 
 export function Header({ streakDays }: HeaderProps) {
   return (
-    <header className="sticky top-0 z-30 border-b border-border bg-background/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-lg items-center justify-between px-4 py-2.5">
-        <Link href="/today" className="group flex items-center gap-2">
-          <div className="card-gradient flex size-8 items-center justify-center rounded-lg text-sm font-bold text-primary-foreground shadow-button">
-            G
-          </div>
-          <span className="text-base font-heading font-semibold tracking-tight">
-            Georgian AI
-          </span>
+    <header className="sticky top-0 z-30 glass">
+      <div className="mx-auto flex h-16 max-w-2xl items-center justify-between px-4">
+        <Link href="/today" className="font-heading text-base font-extrabold tracking-tight">
+          G<span className="text-muted-foreground">.</span>
         </Link>
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-4">
           {streakDays !== undefined && (
-            <div className="flex items-center gap-1 rounded-full bg-amber-50 px-2.5 py-1 text-xs font-medium text-amber-700 dark:bg-amber-900/20 dark:text-amber-400">
-              <Zap className="size-3.5" />
-              <span>{streakDays}</span>
-            </div>
+            <span className="text-xs text-muted-foreground">{streakDays}j</span>
           )}
           <Link
             href="/profile"
-            className="flex size-8 items-center justify-center rounded-full bg-muted transition-colors hover:bg-secondary"
+            className="flex size-8 items-center justify-center rounded-full border border-white/10 transition-colors hover:bg-white/5"
           >
-            <User className="size-4 text-muted-foreground" />
+            <User className="size-3.5" />
           </Link>
         </div>
       </div>

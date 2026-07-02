@@ -1,35 +1,27 @@
 import { getReadingTexts } from "@/lib/reading";
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 export default function ReadingPage() {
   const texts = getReadingTexts();
 
   return (
-    <div className="mx-auto max-w-lg space-y-6 px-4 py-8">
-      <h1 className="text-3xl font-heading font-semibold">Lecture</h1>
+    <div className="mx-auto max-w-2xl space-y-6 px-4 py-8">
+      <h1 className="font-heading text-2xl font-bold tracking-tight">Lecture</h1>
       <div className="space-y-3">
         {texts.map((t) => (
-          <Link key={t.id} href={`/reading/${t.id}`}>
-            <Card className="hover:shadow-md transition-shadow">
-              <CardHeader className="p-4 pb-2">
-                <div className="flex items-start justify-between">
-                  <CardTitle className="text-lg georgian-text">
-                    {t.title}
-                  </CardTitle>
-                  <span className="text-xs text-muted-foreground">
-                    {t.estimatedMinutes} min
-                  </span>
-                </div>
-              </CardHeader>
-              <CardContent className="p-4 pt-0 space-y-1">
-                <p className="text-sm text-muted-foreground">{t.titleFr}</p>
-                <Badge variant="secondary" className="text-[10px]">
-                  {t.level}
-                </Badge>
-              </CardContent>
-            </Card>
+          <Link
+            key={t.id}
+            href={`/reading/${t.id}`}
+            className="flex items-center justify-between rounded-2xl border border-white/6 bg-[#0e0e10] px-6 py-5 transition-all hover:border-white/15 hover:-translate-y-0.5"
+          >
+            <div>
+              <p className="georgian-text text-base">{t.title}</p>
+              <p className="text-sm text-muted-foreground">{t.titleFr}</p>
+            </div>
+            <div className="flex items-center gap-3 text-xs text-muted-foreground">
+              <span className="rounded-full border border-white/10 px-2.5 py-0.5">{t.level}</span>
+              <span>{t.estimatedMinutes} min</span>
+            </div>
           </Link>
         ))}
       </div>

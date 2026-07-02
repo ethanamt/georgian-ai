@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Flashcard from "./Flashcard";
 import { reviewCard } from "@/server/actions/srs";
-import { Button } from "@/components/ui/button";
 import type { SRSReviewResult } from "@/types";
 import type { GeorgianLetter } from "@/types/alphabet";
 import { getAlphabet } from "@/lib/alphabet";
@@ -27,13 +26,8 @@ export function ReviewSession({ cards }: ReviewSessionProps) {
 
   const handleRate = async (quality: number) => {
     if (!currentCard) return;
-    try {
-      await reviewCard(currentCard.cardId, quality);
-    } catch {
-      // Silently handle offline errors
-    }
+    try { await reviewCard(currentCard.cardId, quality); } catch {}
     setResults((prev) => [...prev, { cardId: currentCard.cardId, quality }]);
-
     if (currentIndex < cards.length - 1) {
       setCurrentIndex((i) => i + 1);
     } else {
@@ -44,12 +38,8 @@ export function ReviewSession({ cards }: ReviewSessionProps) {
   if (cards.length === 0) {
     return (
       <div className="text-center py-12">
-        <p className="text-lg text-muted-foreground">
-          Aucune carte à réviser aujourd&apos;hui !
-        </p>
-        <p className="text-sm text-muted-foreground mt-1">
-          Revenez plus tard ou apprenez de nouvelles lettres.
-        </p>
+        <p className="text-sm text-muted-foreground">Aucune carte à réviser aujourd&apos;hui.</p>
+        <p className="text-xs text-muted-foreground mt-1">Revenez plus tard ou apprenez de nouvelles lettres.</p>
       </div>
     );
   }
@@ -57,16 +47,16 @@ export function ReviewSession({ cards }: ReviewSessionProps) {
   if (completed) {
     return (
       <div className="text-center py-12 space-y-4">
-        <p className="text-2xl font-heading font-semibold">
-          Révision terminée !
+        <p className="font-heading text-xl font-bold">Révision terminée</p>
+        <p className="text-sm text-muted-foreground">
+          {results.length} carte{results.length > 1 ? "s" : ""} révisée{results.length > 1 ? "s" : ""}
         </p>
-        <p className="text-muted-foreground">
-          {results.length} carte{results.length > 1 ? "s" : ""} révisée
-          {results.length > 1 ? "s" : ""}
-        </p>
-        <Button onClick={() => { setCurrentIndex(0); setCompleted(false); setResults([]); }}>
+        <button
+          onClick={() => { setCurrentIndex(0); setCompleted(false); setResults([]); }}
+          className="rounded-full border border-white/15 px-6 py-2.5 text-sm transition-all hover:bg-white/5"
+        >
           Recommencer
-        </Button>
+        </button>
       </div>
     );
   }
@@ -84,9 +74,7 @@ export function ReviewSession({ cards }: ReviewSessionProps) {
           <Flashcard letter={currentLetter} onRate={handleRate} />
         ) : (
           <div className="text-center py-12">
-            <p className="text-muted-foreground">
-              Carte non trouvée (vocabulaire manquant)
-            </p>
+            <p className="text-sm text-muted-foreground">Carte non trouvée</p>
           </div>
         )}
       </motion.div>
