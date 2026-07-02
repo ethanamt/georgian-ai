@@ -218,7 +218,7 @@ export function WritingCanvas({
   const handleCheck = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d", { willReadFrequently: true });
     if (!ctx) return;
 
     const userStrokes = [...strokesRef.current];
@@ -240,7 +240,13 @@ export function WritingCanvas({
 
     const userData = ctx.getImageData(0, 0, width, height);
     ctx.clearRect(0, 0, width, height);
-    drawGuide(ctx);
+    ctx.save();
+    ctx.font = "180px 'Noto Sans Georgian'";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillStyle = "#000";
+    ctx.fillText(guideLetter || "", width / 2, height / 2);
+    ctx.restore();
 
     const guideData = ctx.getImageData(0, 0, width, height);
 
