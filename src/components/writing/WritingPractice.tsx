@@ -13,6 +13,8 @@ interface WritingPracticeProps {
 export function WritingPractice({ letters }: WritingPracticeProps) {
   const [index, setIndex] = useState(0);
   const current = letters[index];
+  const hasPrev = index > 0;
+  const hasNext = index < letters.length - 1;
 
   const handleSpeak = () => {
     if (!current || !("speechSynthesis" in window)) return;
@@ -42,32 +44,14 @@ export function WritingPractice({ letters }: WritingPracticeProps) {
         </p>
       </div>
 
-      <WritingCanvas key={current.id} guideLetter={current.georgian} />
-
-      <div className="flex items-center justify-between gap-3">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => setIndex((i) => Math.max(0, i - 1))}
-          disabled={index === 0}
-          className="gap-1"
-        >
-          <ArrowLeft className="size-4" />
-          Précédent
-        </Button>
-        <span className="text-xs text-muted-foreground">
-          {index + 1} / {letters.length}
-        </span>
-        <Button
-          size="sm"
-          onClick={() => setIndex((i) => Math.min(letters.length - 1, i + 1))}
-          disabled={index === letters.length - 1}
-          className="gap-1"
-        >
-          Suivant
-          <ArrowRight className="size-4" />
-        </Button>
-      </div>
+      <WritingCanvas
+        key={current.id}
+        guideLetter={current.georgian}
+        onPrev={hasPrev ? () => setIndex((i) => i - 1) : undefined}
+        onNext={hasNext ? () => setIndex((i) => i + 1) : undefined}
+        letterIndex={index}
+        totalLetters={letters.length}
+      />
     </div>
   );
 }
