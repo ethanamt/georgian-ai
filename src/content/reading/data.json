@@ -10,9 +10,9 @@
       "vocabularyIds": ["voc-greet-1", "voc-greet-2", "voc-greet-3"],
       "paragraphs": [
         {
-          "georgian": "გამარჯობა! მე ვარ ნინო.",
-          "transliteration": "Gamarjoba! Me var Nino.",
-          "french": "Bonjour ! Je suis Nino.",
+          "georgian": "გამარჯობა! მე მქვია ნინო.",
+          "transliteration": "Gamarjoba! Me mkvia Nino.",
+          "french": "Bonjour ! Je m'appelle Nino.",
           "audioSlow": true
         },
         {

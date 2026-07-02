@@ -6,8 +6,8 @@
       "level": "A1",
       "order": 1,
       "estimatedMinutes": 5,
-      "georgianText": "გამარჯობა! მე ვარ გიორგი. მადლობა.",
-      "translation": "Bonjour ! Je suis Giorgi. Merci.",
+      "georgianText": "გამარჯობა! მე მქვია გიორგი. მადლობა.",
+      "translation": "Bonjour ! Je m'appelle Giorgi. Merci.",
       "questions": [
         {
           "question": "Comment s'appelle la personne ?",

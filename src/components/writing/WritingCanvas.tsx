@@ -190,6 +190,31 @@ export function WritingCanvas({
     redraw();
   };
 
+  function dilateMask(
+    alpha: Uint8ClampedArray,
+    w: number,
+    h: number,
+    radius: number
+  ): Uint8Array {
+    const mask = new Uint8Array(w * h);
+    for (let y = 0; y < h; y++) {
+      for (let x = 0; x < w; x++) {
+        const i = (y * w + x) * 4 + 3;
+        if (alpha[i] <= 128) continue;
+        for (let dy = -radius; dy <= radius; dy++) {
+          for (let dx = -radius; dx <= radius; dx++) {
+            const nx = x + dx;
+            const ny = y + dy;
+            if (nx >= 0 && nx < w && ny >= 0 && ny < h) {
+              mask[ny * w + nx] = 1;
+            }
+          }
+        }
+      }
+    }
+    return mask;
+  }
+
   const handleCheck = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -219,17 +244,20 @@ export function WritingCanvas({
 
     const guideData = ctx.getImageData(0, 0, width, height);
 
+    redraw();
+
+    const guideMask = dilateMask(guideData.data, width, height, 2);
+    const userMask = dilateMask(userData.data, width, height, 2);
+
     let overlap = 0;
     let guidePixels = 0;
     let userPixels = 0;
 
-    for (let i = 3; i < userData.data.length; i += 4) {
-      if (guideData.data[i] > 128) guidePixels++;
-      if (userData.data[i] > 128) userPixels++;
-      if (guideData.data[i] > 128 && userData.data[i] > 128) overlap++;
+    for (let i = 0; i < width * height; i++) {
+      if (guideMask[i]) guidePixels++;
+      if (userMask[i]) userPixels++;
+      if (guideMask[i] && userMask[i]) overlap++;
     }
-
-    redraw();
 
     if (guidePixels === 0 || userPixels === 0) {
       setScore(0);

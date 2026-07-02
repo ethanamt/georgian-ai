@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useCallback } from "react";
-import { Volume2, Pause } from "lucide-react";
+import { useState, useCallback, useEffect } from "react";
+import { Volume2, Pause, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Check, X } from "lucide-react";
 
@@ -26,6 +26,26 @@ export function ListeningExercise({
   const [showTranslation, setShowTranslation] = useState(false);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [geoVoice, setGeoVoice] = useState<SpeechSynthesisVoice | null>(null);
+  const [voicesLoaded, setVoicesLoaded] = useState(false);
+
+  useEffect(() => {
+    const load = () => {
+      const v = window.speechSynthesis?.getVoices() ?? [];
+      const gv = v.find((v) => v.lang.startsWith("ka")) ?? null;
+      setGeoVoice(gv);
+      setVoicesLoaded(true);
+    };
+    load();
+    if (window.speechSynthesis) {
+      window.speechSynthesis.onvoiceschanged = load;
+    }
+    return () => {
+      if (window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = null;
+      }
+    };
+  }, []);
 
   const handlePlay = useCallback(() => {
     if (playing) {
@@ -37,11 +57,12 @@ export function ListeningExercise({
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = "ka";
       utterance.rate = 0.7;
+      if (geoVoice) utterance.voice = geoVoice;
       utterance.onend = () => setPlaying(false);
       window.speechSynthesis.speak(utterance);
       setPlaying(true);
     }
-  }, [text, playing]);
+  }, [text, playing, geoVoice]);
 
   const handleSelect = (qIdx: number, optIdx: number) => {
     if (submitted) return;
@@ -70,6 +91,12 @@ export function ListeningExercise({
         <p className="text-sm text-muted-foreground">
           {playing ? "Lecture en cours..." : "Appuyez pour écouter"}
         </p>
+        {voicesLoaded && !geoVoice && (
+          <p className="flex items-center justify-center gap-1.5 text-xs text-amber-600">
+            <AlertTriangle className="size-3.5" />
+            Aucune voix géorgienne trouvée sur votre appareil. La prononciation peut être incorrecte.
+          </p>
+        )}
         {showTranslation && (
           <p className="text-sm italic text-muted-foreground border-t border-border pt-3">
             {translation}
