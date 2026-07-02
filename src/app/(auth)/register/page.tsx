@@ -34,16 +34,32 @@ export default function RegisterPage() {
       console.log("signUp attempt:", email);
 
       const result = await supabase.auth.signUp({ email, password });
-      const { user } = result.data || {};
+      const { user, session } = result.data || {};
       const authError = result.error;
 
-      console.log("signUp result:", { user, authError: authError ? { message: authError.message, ...authError } : null });
+      console.log("signUp result:", { user, hasSession: !!session, authError: authError ? { message: authError.message, ...authError } : null });
 
       if (authError || !user) {
         const msg = authError?.message ? String(authError.message) : "Erreur lors de l'inscription";
         setError(msg);
         setPending(false);
         return;
+      }
+
+      // Ensure session is established before making authenticated requests
+      let { data: { session: currentSession } } = await supabase.auth.getSession();
+      if (!currentSession) {
+        console.log("no session after signUp, calling signInWithPassword");
+        const { error: signInError } = await supabase.auth.signInWithPassword({ email, password });
+        if (signInError) {
+          console.error("post-signUp signIn error:", signInError);
+          setError("Erreur lors de la connexion automatique");
+          setPending(false);
+          return;
+        }
+        const sessionCheck = await supabase.auth.getSession();
+        currentSession = sessionCheck.data.session;
+        console.log("session after signIn:", !!currentSession);
       }
 
       const { error: profileError } = await supabase
