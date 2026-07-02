@@ -42,7 +42,7 @@ export function WritingPractice({ letters }: WritingPracticeProps) {
         </p>
       </div>
 
-      <WritingCanvas guideLetter={current.georgian} />
+      <WritingCanvas key={current.id} guideLetter={current.georgian} />
 
       <div className="flex items-center justify-between gap-3">
         <Button
