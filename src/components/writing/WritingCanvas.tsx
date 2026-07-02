@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import { RotateCcw, Undo2, Check, ArrowLeft, ArrowRight } from "lucide-react";
+import { RotateCcw, Undo2, Check } from "lucide-react";
 
 interface Point {
   x: number;
@@ -18,10 +18,6 @@ interface WritingCanvasProps {
   onStroke?: (stroke: Stroke) => void;
   width?: number;
   height?: number;
-  onPrev?: () => void;
-  onNext?: () => void;
-  letterIndex?: number;
-  totalLetters?: number;
 }
 
 function calculateAccuracy(
@@ -71,10 +67,6 @@ export function WritingCanvas({
   guideLetter,
   width = 280,
   height = 280,
-  onPrev,
-  onNext,
-  letterIndex,
-  totalLetters,
 }: WritingCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isDrawing, setIsDrawing] = useState(false);
@@ -340,33 +332,6 @@ export function WritingCanvas({
         >
           <Check className="size-3.5" />
           Vérifier
-        </Button>
-      </div>
-
-      <div className="flex items-center justify-between gap-3 pt-2">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={onPrev}
-          disabled={!onPrev}
-          className="gap-1"
-        >
-          <ArrowLeft className="size-4" />
-          Précédent
-        </Button>
-        {letterIndex !== undefined && totalLetters !== undefined && (
-          <span className="text-xs text-muted-foreground">
-            {letterIndex + 1} / {totalLetters}
-          </span>
-        )}
-        <Button
-          size="sm"
-          onClick={onNext}
-          disabled={!onNext}
-          className="gap-1"
-        >
-          Suivant
-          <ArrowRight className="size-4" />
         </Button>
       </div>
     </div>

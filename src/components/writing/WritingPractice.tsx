@@ -27,7 +27,7 @@ export function WritingPractice({ letters }: WritingPracticeProps) {
   if (!current) return null;
 
   return (
-    <div className="space-y-6">
+    <div className="flex flex-col min-h-[60vh]">
       <div className="text-center space-y-2">
         <div className="flex items-center justify-center gap-3">
           <span className="text-5xl georgian-text">{current.georgian}</span>
@@ -44,14 +44,36 @@ export function WritingPractice({ letters }: WritingPracticeProps) {
         </p>
       </div>
 
-      <WritingCanvas
-        key={current.id}
-        guideLetter={current.georgian}
-        onPrev={hasPrev ? () => setIndex((i) => i - 1) : undefined}
-        onNext={hasNext ? () => setIndex((i) => i + 1) : undefined}
-        letterIndex={index}
-        totalLetters={letters.length}
-      />
+      <div className="flex-1" />
+
+      <WritingCanvas key={current.id} guideLetter={current.georgian} />
+
+      <div className="flex-1" />
+
+      <div className="flex items-center justify-between gap-3">
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => setIndex((i) => Math.max(0, i - 1))}
+          disabled={index === 0}
+          className="gap-1"
+        >
+          <ArrowLeft className="size-4" />
+          Précédent
+        </Button>
+        <span className="text-xs text-muted-foreground">
+          {index + 1} / {letters.length}
+        </span>
+        <Button
+          size="sm"
+          onClick={() => setIndex((i) => Math.min(letters.length - 1, i + 1))}
+          disabled={index === letters.length - 1}
+          className="gap-1"
+        >
+          Suivant
+          <ArrowRight className="size-4" />
+        </Button>
+      </div>
     </div>
   );
 }
