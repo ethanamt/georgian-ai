@@ -343,34 +343,32 @@ export function WritingCanvas({
         </Button>
       </div>
 
-      {(onPrev || onNext) && (
-        <div className="flex items-center justify-between gap-3 pt-2">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={onPrev}
-            disabled={!onPrev}
-            className="gap-1"
-          >
-            <ArrowLeft className="size-4" />
-            Précédent
-          </Button>
-          {letterIndex !== undefined && totalLetters !== undefined && (
-            <span className="text-xs text-muted-foreground">
-              {letterIndex + 1} / {totalLetters}
-            </span>
-          )}
-          <Button
-            size="sm"
-            onClick={onNext}
-            disabled={!onNext}
-            className="gap-1"
-          >
-            Suivant
-            <ArrowRight className="size-4" />
-          </Button>
-        </div>
-      )}
+      <div className="flex items-center justify-between gap-3 pt-2">
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={onPrev}
+          disabled={!onPrev}
+          className="gap-1"
+        >
+          <ArrowLeft className="size-4" />
+          Précédent
+        </Button>
+        {letterIndex !== undefined && totalLetters !== undefined && (
+          <span className="text-xs text-muted-foreground">
+            {letterIndex + 1} / {totalLetters}
+          </span>
+        )}
+        <Button
+          size="sm"
+          onClick={onNext}
+          disabled={!onNext}
+          className="gap-1"
+        >
+          Suivant
+          <ArrowRight className="size-4" />
+        </Button>
+      </div>
     </div>
   );
 }
