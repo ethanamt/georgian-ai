@@ -1,6 +1,7 @@
 import { getLessons } from "@/lib/lessons";
 import Link from "next/link";
-import { Giorgi } from "@/components/mascot/Giorgi";
+import { VepkhiMascot } from "@/components/mascot/VepkhiMascot";
+import { MascotState } from "@/components/mascot/vepkhi.states";
 
 export default function GrammarPage() {
   const lessons = getLessons();
@@ -8,7 +9,7 @@ export default function GrammarPage() {
   return (
     <div className="mx-auto max-w-2xl space-y-6 px-4 py-8">
       <div className="flex items-center gap-3">
-        <Giorgi size={44} mood="idle" />
+        <VepkhiMascot state={MascotState.Idle} size="sm" />
         <h1 className="font-heading text-2xl font-bold tracking-tight">Grammaire</h1>
       </div>
       <div className="space-y-3">
