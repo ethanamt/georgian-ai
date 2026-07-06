@@ -40,7 +40,7 @@ export default function HomePage() {
           <div className="mx-auto grid w-full max-w-5xl grid-cols-[1.1fr_1fr] gap-20 items-center px-6">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <Giorgi size={48} variant="teach" />
+                <Giorgi size={48} mood="wave" />
                 <h1 className="font-heading text-[clamp(3rem,7vw,5rem)] font-extrabold leading-[.95] tracking-[-2px]">
                   Maîtrisez le
                   <br />
