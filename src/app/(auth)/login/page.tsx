@@ -6,8 +6,6 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useSupabaseOrNull } from "@/components/providers";
 import Link from "next/link";
-import { VepkhiMascot } from "@/components/mascot/VepkhiMascot";
-import { MascotState } from "@/components/mascot/vepkhi.states";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -47,8 +45,7 @@ export default function LoginPage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center px-4">
       <div className="w-full max-w-sm">
-        <div className="mb-10 text-center flex flex-col items-center gap-3">
-          <VepkhiMascot state={MascotState.Idle} size="sm" />
+        <div className="mb-10 text-center">
           <h1 className="font-heading text-3xl font-bold tracking-tight">Connexion</h1>
           <p className="text-sm text-muted-foreground">Connectez-vous pour continuer</p>
         </div>

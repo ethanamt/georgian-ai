@@ -4,8 +4,6 @@ import { getUser } from "@/server/actions/auth";
 import { getUserProgress } from "@/server/actions/progress";
 import Link from "next/link";
 import { BookOpen, RefreshCw, PenLine, Mic, MessageSquareText, Sparkles } from "lucide-react";
-import { VepkhiMascot } from "@/components/mascot/VepkhiMascot";
-import { MascotState } from "@/components/mascot/vepkhi.states";
 
 const quickActions = [
   { href: "/lessons", label: "Leçon", icon: BookOpen },
@@ -22,17 +20,14 @@ export default async function TodayPage() {
 
   return (
     <div className="mx-auto max-w-2xl space-y-8 px-4 py-8">
-      <div className="flex items-start gap-4">
-        <VepkhiMascot state={MascotState.Idle} size="sm" className="shrink-0" />
-        <div className="space-y-1">
-          <h1 className="font-heading text-2xl font-bold tracking-tight">
+      <div className="space-y-1">
+        <h1 className="font-heading text-2xl font-bold tracking-tight">
             Bonjour{user?.email ? `, ${user.email.split("@")[0]}` : ""}
           </h1>
           <p className="text-sm text-muted-foreground">
             Prêt pour votre session du jour.
           </p>
         </div>
-      </div>
 
       {progress && (
         <>
