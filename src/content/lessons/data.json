@@ -1,7 +1,122 @@
 {
   "lessons": [
     {
-      "slug": "present-etre",
+      "slug": "salutations",
+      "title": "Les salutations",
+      "description": "Dire bonjour, au revoir, merci — les bases de la conversation",
+      "level": "A1",
+      "order": 0,
+      "estimatedMinutes": 10,
+      "sections": [
+        {
+          "type": "text",
+          "content": "Les salutations sont le premier pas dans toute langue. Voici les expressions essentielles pour commencer une conversation en géorgien."
+        },
+        {
+          "type": "table",
+          "title": "Dire bonjour",
+          "header": ["Français", "Géorgien", "Transcription"],
+          "rows": [
+            ["Bonjour (général)", "გამარჯობა", "gamarjoba"],
+            ["Salut (familier)", "სალამი", "salami"],
+            ["Bonjour (le matin)", "დილა მშვიდობისა", "dila mshvidobisa"],
+            ["Bonjour (la journée)", "დღე მშვიდობისა", "dghe mshvidobisa"],
+            ["Bonsoir", "საღამო მშვიდობისა", "saghamo mshvidobisa"],
+            ["Bonne nuit", "ღამე მშვიდობისა", "ghame mshvidobisa"]
+          ]
+        },
+        {
+          "type": "text",
+          "content": "Le mot clé est მშვიდობა (mshvidoba) qui signifie « paix ». Les salutations selon le moment de la journée sont littéralement « paix du matin », « paix du jour », etc."
+        },
+        {
+          "type": "table",
+          "title": "Prendre congé",
+          "header": ["Français", "Géorgien", "Transcription"],
+          "rows": [
+            ["Au revoir", "ნახვამდის", "nakhvamdis"],
+            ["Adieu (formel)", "მშვიდობით", "mshvidobit"],
+            ["À demain", "ხვალამდე", "khvalamde"],
+            ["À plus tard", "მოგვიანებით", "mogvianebit"]
+          ]
+        },
+        {
+          "type": "example",
+          "georgian": "ნახვამდის, ხვალამდე!",
+          "transliteration": "Nakhvamdis, khvalamde!",
+          "french": "Au revoir, à demain !"
+        },
+        {
+          "type": "table",
+          "title": "Politesse",
+          "header": ["Français", "Géorgien", "Transcription"],
+          "rows": [
+            ["Merci", "მადლობა", "madloba"],
+            ["Merci (formel)", "გმადლობთ", "gmadlobt"],
+            ["De rien", "არაფერი", "araperi"],
+            ["S'il vous plaît", "გთხოვთ", "gtkhovt"],
+            ["S'il te plaît", "გთხოვ", "gtkhov"],
+            ["Pardon / désolé", "ბოდიში", "bodishi"],
+            ["Excusez-moi", "უკაცრავად", "ukatsravad"]
+          ]
+        },
+        {
+          "type": "example",
+          "georgian": "გმადლობთ, ძალიან კეთილი ხართ.",
+          "transliteration": "Gmadlobt, dzalian ketili khart.",
+          "french": "Merci, vous êtes très gentil·le."
+        },
+        {
+          "type": "table",
+          "title": "Comment ça va ?",
+          "header": ["Français", "Géorgien", "Transcription"],
+          "rows": [
+            ["Comment ça va ? (fam.)", "როგორ ხარ?", "rogor khar?"],
+            ["Comment allez-vous ? (form.)", "როგორ ხართ?", "rogor khart?"],
+            ["Bien, et toi ?", "კარგად, შენ?", "kargad, shen?"],
+            ["Très bien", "ძალიან კარგად", "dzalian kargad"],
+            ["Ça va", "კარგად", "kargad"],
+            ["Pas mal", "ცუდი არა", "tsudi ara"]
+          ]
+        },
+        {
+          "type": "example",
+          "georgian": "— როგორ ხარ?\n— კარგად, მადლობა. შენ?",
+          "transliteration": "— Rogor khar?\n— Kargad, madloba. Shen?",
+          "french": "— Comment ça va ?\n— Bien, merci. Et toi ?"
+        },
+        {
+          "type": "example",
+          "georgian": "— როგორ ხართ?\n— ძალიან კარგად, გმადლობთ.",
+          "transliteration": "— Rogor khart?\n— Dzalian kargad, gmadlobt.",
+          "french": "— Comment allez-vous ?\n— Très bien, merci."
+        },
+        {
+          "type": "table",
+          "title": "Autres expressions utiles",
+          "header": ["Français", "Géorgien", "Transcription"],
+          "rows": [
+            ["Bienvenue", "კეთილი იყოს თქვენი მობრძანება", "ketili iqos tkveni mobrdzaneba"],
+            ["Félicitations / Santé !", "გილოცავ", "gilotsav"],
+            ["Bonne chance", "წარმატებები", "ts'armatebebi"],
+            ["Bon appétit", "გემრიელად მიირთვით", "gemrielad miirtvit"],
+            ["À ta santé !", "შენი ჯანმრთელობისთვის!", "sheni janmrtelobistvis!"],
+            ["Bonne journée", "დღე კარგად გაატარე", "dghe kargad gaat'are"]
+          ]
+        },
+        {
+          "type": "example",
+          "georgian": "გილოცავ! ბედნიერი იუბილე!",
+          "transliteration": "Gilotsav! Bednieri iubile!",
+          "french": "Félicitations ! Joyeux anniversaire !"
+        },
+        {
+          "type": "note",
+          "content": "En Géorgie, il est courant de dire გამარჯობა (gamarjoba) même aux inconnus dans la rue, dans les magasins ou les transports. C'est un signe de politesse essentiel."
+        }
+      ]
+    },
+    {
       "title": "Le verbe « être » au présent",
       "description": "Conjugaison du verbe ყოფნა (q'opna) — être",
       "level": "A1",

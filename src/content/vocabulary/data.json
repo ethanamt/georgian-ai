@@ -6,10 +6,25 @@
       "icon": "👋",
       "words": [
         { "id": "voc-greet-1", "georgian": "გამარჯობა", "transliteration": "gamarjoba", "french": "bonjour", "difficulty": 1 },
-        { "id": "voc-greet-2", "georgian": "ნახვამდის", "transliteration": "nakhvamdis", "french": "au revoir", "difficulty": 1 },
-        { "id": "voc-greet-3", "georgian": "მადლობა", "transliteration": "madloba", "french": "merci", "difficulty": 1 },
-        { "id": "voc-greet-4", "georgian": "ბოდიში", "transliteration": "bodishi", "french": "pardon", "difficulty": 1 },
-        { "id": "voc-greet-5", "georgian": "კეთილი იყოს თქვენი მობრძანება", "transliteration": "ketili iqos tkveni mobrdzaneba", "french": "bienvenue", "difficulty": 3 }
+        { "id": "voc-greet-2", "georgian": "სალამი", "transliteration": "salami", "french": "salut", "difficulty": 1 },
+        { "id": "voc-greet-3", "georgian": "ნახვამდის", "transliteration": "nakhvamdis", "french": "au revoir", "difficulty": 1 },
+        { "id": "voc-greet-4", "georgian": "მშვიდობით", "transliteration": "mshvidobit", "french": "adieu (formel)", "difficulty": 2 },
+        { "id": "voc-greet-5", "georgian": "დილა მშვიდობისა", "transliteration": "dila mshvidobisa", "french": "bonjour (matin)", "difficulty": 2 },
+        { "id": "voc-greet-6", "georgian": "დღე მშვიდობისა", "transliteration": "dghe mshvidobisa", "french": "bonjour (journée)", "difficulty": 2 },
+        { "id": "voc-greet-7", "georgian": "საღამო მშვიდობისა", "transliteration": "saghamo mshvidobisa", "french": "bonsoir", "difficulty": 2 },
+        { "id": "voc-greet-8", "georgian": "ღამე მშვიდობისა", "transliteration": "ghame mshvidobisa", "french": "bonne nuit", "difficulty": 2 },
+        { "id": "voc-greet-9", "georgian": "როგორ ხარ?", "transliteration": "rogor khar?", "french": "comment ça va ?", "difficulty": 1 },
+        { "id": "voc-greet-10", "georgian": "როგორ ხართ?", "transliteration": "rogor khart?", "french": "comment allez-vous ?", "difficulty": 1 },
+        { "id": "voc-greet-11", "georgian": "კარგად", "transliteration": "kargad", "french": "bien (va bien)", "difficulty": 1 },
+        { "id": "voc-greet-12", "georgian": "ძალიან კარგად", "transliteration": "dzalian kargad", "french": "très bien", "difficulty": 1 },
+        { "id": "voc-greet-13", "georgian": "მადლობა", "transliteration": "madloba", "french": "merci", "difficulty": 1 },
+        { "id": "voc-greet-14", "georgian": "გმადლობთ", "transliteration": "gmadlobt", "french": "merci (formel)", "difficulty": 2 },
+        { "id": "voc-greet-15", "georgian": "არაფერი", "transliteration": "araperi", "french": "de rien", "difficulty": 1 },
+        { "id": "voc-greet-16", "georgian": "გეთაყვა", "transliteration": "getaqva", "french": "s'il vous plaît", "difficulty": 2 },
+        { "id": "voc-greet-17", "georgian": "ბოდიში", "transliteration": "bodishi", "french": "pardon / désolé", "difficulty": 1 },
+        { "id": "voc-greet-18", "georgian": "უკაცრავად", "transliteration": "ukatsravad", "french": "excusez-moi", "difficulty": 2 },
+        { "id": "voc-greet-19", "georgian": "გილოცავ", "transliteration": "gilotsav", "french": "félicitations / santé", "difficulty": 2 },
+        { "id": "voc-greet-20", "georgian": "კეთილი იყოს თქვენი მობრძანება", "transliteration": "ketili iqos tkveni mobrdzaneba", "french": "bienvenue", "difficulty": 3 }
       ]
     },
     {
