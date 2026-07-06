@@ -102,7 +102,7 @@ export function WritingCanvas({
     ctx.font = "180px 'Noto Sans Georgian'";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillStyle = "rgba(122, 36, 54, 0.08)";
+    ctx.fillStyle = "rgba(255, 255, 255, 0.2)";
     ctx.fillText(guideLetter, width / 2, height / 2);
     ctx.restore();
   }, [guideLetter, width, height]);
@@ -116,7 +116,7 @@ export function WritingCanvas({
     ctx.clearRect(0, 0, width, height);
     drawGuide(ctx);
 
-    ctx.strokeStyle = "#7A2436";
+    ctx.strokeStyle = "#FFFFFF";
     ctx.lineWidth = 4;
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
@@ -157,7 +157,7 @@ export function WritingCanvas({
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    ctx.strokeStyle = "#7A2436";
+    ctx.strokeStyle = "#FFFFFF";
     ctx.lineWidth = 4;
     ctx.lineCap = "round";
     const pts = currentStrokeRef.current;
