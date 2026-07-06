@@ -265,18 +265,25 @@ export function WritingCanvas({
       if (guideMask[i] && userMask[i]) overlap++;
     }
 
-    if (guidePixels === 0 || userPixels === 0) {
+    if (guidePixels === 0) {
       setScore(0);
       return;
     }
 
-    const recall = overlap / guidePixels;
-    const precision = overlap / userPixels;
-    const f1 = recall + precision > 0
-      ? Math.round((2 * (recall * precision) / (recall + precision)) * 100)
-      : 0;
+    if (userPixels === 0) {
+      setScore(0);
+      return;
+    }
 
-    setScore(f1);
+    // Si tout le trait utilisateur est dans le modèle → 100%
+    if (overlap === userPixels) {
+      setScore(100);
+      return;
+    }
+
+    // Sinon, score basé sur la précision (% du trait dans le modèle)
+    const score = Math.round((overlap / userPixels) * 100);
+    setScore(Math.max(0, Math.min(100, score)));
   };
 
   return (
