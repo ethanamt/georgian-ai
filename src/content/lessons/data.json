@@ -54,11 +54,130 @@
       ]
     },
     {
+      "slug": "pronoms-personnels",
+      "title": "Les pronoms personnels",
+      "description": "Je, tu, il/elle, nous, vous — les pronoms de base en géorgien",
+      "level": "A1",
+      "order": 2,
+      "estimatedMinutes": 10,
+      "sections": [
+        {
+          "type": "text",
+          "content": "Les pronoms personnels en géorgien sont au cœur de la conjugaison. Contrairement au français, on les omet souvent car la terminaison du verbe indique déjà la personne. Mais il est essentiel de les connaître."
+        },
+        {
+          "type": "table",
+          "title": "Pronoms personnels sujets",
+          "header": ["Français", "Géorgien", "Transcription", "Note"],
+          "rows": [
+            ["je", "მე", "me", "toujours singulier"],
+            ["tu (fam.)", "შენ", "shen", "familier, ami·e"],
+            ["il / elle", "ის", "is", "neutre, pas de genre"],
+            ["nous", "ჩვენ", "chven", "inclusif / exclusif"],
+            ["vous (fam.)", "თქვენ", "tkven", "pluriel ou poli"],
+            ["ils / elles", "ისინი", "isini", "neutre pluriel"]
+          ]
+        },
+        {
+          "type": "text",
+          "content": "Le géorgien ne distingue pas le genre (il/elle) à l'écrit ni à l'oral : ის (is) signifie aussi bien « il » que « elle ». Le contexte fait la différence."
+        },
+        {
+          "type": "text",
+          "content": "Le vouvoiement se fait avec თქვენ (tkven) — qui est aussi le « vous » pluriel. C'est similaire au français. On utilise შენ (shen) avec les amis, la famille et les enfants."
+        },
+        {
+          "type": "example",
+          "georgian": "მე ვარ გიორგი.",
+          "transliteration": "Me var Giorgi.",
+          "french": "Je suis Giorgi."
+        },
+        {
+          "type": "example",
+          "georgian": "შენ ხარ მეგობარი.",
+          "transliteration": "Shen khar megobari.",
+          "french": "Tu es un·e ami·e."
+        },
+        {
+          "type": "example",
+          "georgian": "ის არის ექიმი.",
+          "transliteration": "Is aris ekimi.",
+          "french": "Il/Elle est médecin."
+        },
+        {
+          "type": "example",
+          "georgian": "ჩვენ ვართ სტუდენტები.",
+          "transliteration": "Chven vart student'ebi.",
+          "french": "Nous sommes étudiant·e·s."
+        },
+        {
+          "type": "example",
+          "georgian": "თქვენ ხართ მასწავლებელი?",
+          "transliteration": "Tkven khart masts'avlebeli?",
+          "french": "Êtes-vous professeur ?"
+        },
+        {
+          "type": "example",
+          "georgian": "ისინი არიან ჩემი მეგობრები.",
+          "transliteration": "Isini arian chemi megobrebi.",
+          "french": "Ils/Elles sont mes ami·e·s."
+        },
+        {
+          "type": "note",
+          "content": "À l'oral, on dit rarement მე (me) devant le verbe — « ვარ » (je suis) suffit. Le pronom n'est utilisé que pour insister ou clarifier."
+        },
+        {
+          "type": "table",
+          "title": "Pronoms compléments (datif)",
+          "header": ["Français", "Géorgien", "Transcription", "Exemple"],
+          "rows": [
+            ["moi / à moi", "მე (მე)", "me", "მე მაქვს (moi j'ai)"],
+            ["toi / à toi", "შენ (შენ)", "shen", "შენ ხარ (toi tu es)"],
+            ["lui / elle", "მას", "mas", "მას აქვს (lui/elle a)"],
+            ["nous", "ჩვენ", "chven", "ჩვენ გვაქვს (nous avons)"],
+            ["vous", "თქვენ", "tkven", "თქვენ გაქვთ (vous avez)"],
+            ["eux / elles", "მათ", "mat", "მათ აქვთ (eux/elles ont)"]
+          ]
+        },
+        {
+          "type": "example",
+          "georgian": "მას აქვს წიგნი.",
+          "transliteration": "Mas akvs ts'igni.",
+          "french": "Lui/Elle a un livre."
+        },
+        {
+          "type": "example",
+          "georgian": "მე მქვია ნინო.",
+          "transliteration": "Me mkvia Nino.",
+          "french": "Je m'appelle Nino."
+        },
+        {
+          "type": "note",
+          "content": "Notez la différence : ის (is) = il/elle sujet, მას (mas) = lui/elle complément. C'est une distinction qui n'existe pas en français mais qui est importante en géorgien."
+        },
+        {
+          "type": "text",
+          "content": "Résumé des pronoms les plus utiles pour débuter :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "მე (me) — je / moi",
+            "შენ (shen) — tu / toi (familier)",
+            "ის (is) — il, elle, le, la",
+            "ჩვენ (chven) — nous",
+            "თქვენ (tkven) — vous (poli ou pluriel)",
+            "ისინი (isini) — ils, elles, les"
+          ]
+        }
+      ]
+    },
+    {
       "slug": "ordre-mots",
       "title": "L'ordre des mots",
       "description": "Structure de phrase SOV et particularités",
       "level": "A1",
-      "order": 2,
+      "order": 3,
       "estimatedMinutes": 10,
       "sections": [
         {
@@ -95,7 +214,7 @@
       "title": "Le pluriel",
       "description": "Formation du pluriel des noms",
       "level": "A1",
-      "order": 3,
+      "order": 4,
       "estimatedMinutes": 10,
       "sections": [
         {
@@ -135,7 +254,7 @@
       "title": "La négation",
       "description": "Comment former des phrases négatives",
       "level": "A1",
-      "order": 4,
+      "order": 5,
       "estimatedMinutes": 10,
       "sections": [
         {
@@ -175,7 +294,7 @@
       "title": "Poser des questions",
       "description": "Mots interrogatifs et formation des questions",
       "level": "A1",
-      "order": 5,
+      "order": 6,
       "estimatedMinutes": 10,
       "sections": [
         {
@@ -225,7 +344,7 @@
       "title": "Le verbe « avoir » au présent",
       "description": "Conjugaison du verbe ქონა (kona) — avoir",
       "level": "A1",
-      "order": 6,
+      "order": 7,
       "estimatedMinutes": 10,
       "sections": [
         {
@@ -268,7 +387,7 @@
       "title": "Les postpositions",
       "description": "Au lieu des prépositions : les suffixes de cas",
       "level": "A1",
-      "order": 7,
+      "order": 8,
       "estimatedMinutes": 10,
       "sections": [
         {
@@ -311,7 +430,7 @@
       "title": "L'écriture Mkhedruli",
       "description": "Particularités de l'écriture et prononciation",
       "level": "A1",
-      "order": 8,
+      "order": 9,
       "estimatedMinutes": 10,
       "sections": [
         {
@@ -339,7 +458,7 @@
       "title": "Les possessifs",
       "description": "Mon, ton, son — les adjectifs possessifs",
       "level": "A1",
-      "order": 9,
+      "order": 10,
       "estimatedMinutes": 10,
       "sections": [
         {
@@ -382,7 +501,7 @@
       "title": "Le présent des verbes réguliers",
       "description": "Conjugaison des verbes au présent (classe 1)",
       "level": "A1",
-      "order": 10,
+      "order": 11,
       "estimatedMinutes": 10,
       "sections": [
         {
@@ -417,7 +536,7 @@
       "title": "Négation approfondie",
       "description": "Ne...pas, ne...jamais, ne...personne",
       "level": "A1",
-      "order": 11,
+      "order": 12,
       "estimatedMinutes": 10,
       "sections": [
         {
@@ -455,7 +574,7 @@
       "title": "L'impératif",
       "description": "Donner des ordres et instructions",
       "level": "A1",
-      "order": 12,
+      "order": 13,
       "estimatedMinutes": 10,
       "sections": [
         {
@@ -497,7 +616,7 @@
       "title": "Les cas grammaticaux",
       "description": "Nominatif, ergatif, datif, génitif",
       "level": "A1",
-      "order": 13,
+      "order": 14,
       "estimatedMinutes": 10,
       "sections": [
         {

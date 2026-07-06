@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Giorgi } from "@/components/mascot/Giorgi";
 
 const features = [
   { title: "Alphabet", desc: "33 lettres Mkhedruli" },
@@ -38,11 +39,14 @@ export default function HomePage() {
         <section className="relative z-10 flex min-h-screen items-center pt-24">
           <div className="mx-auto grid w-full max-w-5xl grid-cols-[1.1fr_1fr] gap-20 items-center px-6">
             <div>
-              <h1 className="font-heading text-[clamp(3rem,7vw,5rem)] font-extrabold leading-[.95] tracking-[-2px] mb-6">
-                Maîtrisez le
-                <br />
-                géorgien.
-              </h1>
+              <div className="flex items-center gap-3 mb-6">
+                <Giorgi size={48} variant="teach" />
+                <h1 className="font-heading text-[clamp(3rem,7vw,5rem)] font-extrabold leading-[.95] tracking-[-2px]">
+                  Maîtrisez le
+                  <br />
+                  géorgien.
+                </h1>
+              </div>
               <p className="text-lg text-muted-foreground max-w-[500px] mb-8 leading-relaxed">
                 15 minutes par jour. Leçons, révision intelligente, prononciation et écriture —
                 tout ce qu&apos;il vous faut pour parler géorgien.

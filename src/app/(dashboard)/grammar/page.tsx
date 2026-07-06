@@ -1,12 +1,16 @@
 import { getLessons } from "@/lib/lessons";
 import Link from "next/link";
+import { Giorgi } from "@/components/mascot/Giorgi";
 
 export default function GrammarPage() {
   const lessons = getLessons();
 
   return (
     <div className="mx-auto max-w-2xl space-y-6 px-4 py-8">
-      <h1 className="font-heading text-2xl font-bold tracking-tight">Grammaire</h1>
+      <div className="flex items-center gap-3">
+        <Giorgi size={44} variant="teach" />
+        <h1 className="font-heading text-2xl font-bold tracking-tight">Grammaire</h1>
+      </div>
       <div className="space-y-3">
         {lessons.map((lesson) => (
           <Link
